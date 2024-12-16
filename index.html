@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.2">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Norah Jones">
+<meta name="dcterms.date" content="2024-12-16">
+
+<title>book</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-07c16812f08c4a1591d6ec4fc46327fa.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7930a387d1d9c5a851eba23757f768d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">book</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#theoretical-framework" id="toc-theoretical-framework" class="nav-link" data-scroll-target="#theoretical-framework"><span class="header-section-number">2</span> Theoretical Framework</a>
+  <ul class="collapse">
+  <li><a href="#understanding-satellites-definition-and-common-features" id="toc-understanding-satellites-definition-and-common-features" class="nav-link" data-scroll-target="#understanding-satellites-definition-and-common-features"><span class="header-section-number">2.1</span> Understanding satellites: definition and common features</a></li>
+  <li><a href="#publicly-available-satellite-data-and-platforms-for-monitoring-coastal-shoreline-dynamics-a-comprehensive-overview" id="toc-publicly-available-satellite-data-and-platforms-for-monitoring-coastal-shoreline-dynamics-a-comprehensive-overview" class="nav-link" data-scroll-target="#publicly-available-satellite-data-and-platforms-for-monitoring-coastal-shoreline-dynamics-a-comprehensive-overview"><span class="header-section-number">2.2</span> Publicly available satellite data and platforms for monitoring coastal shoreline dynamics: a comprehensive overview</a>
+  <ul class="collapse">
+  <li><a href="#copernicus-browser" id="toc-copernicus-browser" class="nav-link" data-scroll-target="#copernicus-browser"><span class="header-section-number">2.2.1</span> Copernicus Browser</a></li>
+  <li><a href="#planetscope-free-access-under-specific-conditions" id="toc-planetscope-free-access-under-specific-conditions" class="nav-link" data-scroll-target="#planetscope-free-access-under-specific-conditions"><span class="header-section-number">2.2.2</span> PlanetScope: free access under specific conditions</a></li>
+  <li><a href="#rapideye-discontinued-in-2020" id="toc-rapideye-discontinued-in-2020" class="nav-link" data-scroll-target="#rapideye-discontinued-in-2020"><span class="header-section-number">2.2.3</span> RapidEye (discontinued in 2020)</a></li>
+  </ul></li>
+  <li><a href="#free-and-open-source-software-tools-that-could-be-used-for-monitoring-coastal-shoreline-fluctuations" id="toc-free-and-open-source-software-tools-that-could-be-used-for-monitoring-coastal-shoreline-fluctuations" class="nav-link" data-scroll-target="#free-and-open-source-software-tools-that-could-be-used-for-monitoring-coastal-shoreline-fluctuations"><span class="header-section-number">2.3</span> Free and open-Source software Tools that could be used for monitoring coastal shoreline fluctuations</a>
+  <ul class="collapse">
+  <li><a href="#qgis-strengths-and-limitations-in-geospatial-analysis" id="toc-qgis-strengths-and-limitations-in-geospatial-analysis" class="nav-link" data-scroll-target="#qgis-strengths-and-limitations-in-geospatial-analysis"><span class="header-section-number">2.3.1</span> QGIS: strengths and limitations in geospatial analysis</a></li>
+  <li><a href="#geospatial-analysis-using-python-libraries" id="toc-geospatial-analysis-using-python-libraries" class="nav-link" data-scroll-target="#geospatial-analysis-using-python-libraries"><span class="header-section-number">2.3.2</span> Geospatial analysis using python libraries</a></li>
+  <li><a href="#r-for-remote-sensing-capabilities-and-limitations" id="toc-r-for-remote-sensing-capabilities-and-limitations" class="nav-link" data-scroll-target="#r-for-remote-sensing-capabilities-and-limitations"><span class="header-section-number">2.3.3</span> R for remote sensing: capabilities and limitations</a></li>
+  </ul></li>
+  <li><a href="#panchromatic-and-pansharpened-satellite-imagery" id="toc-panchromatic-and-pansharpened-satellite-imagery" class="nav-link" data-scroll-target="#panchromatic-and-pansharpened-satellite-imagery"><span class="header-section-number">2.4</span> Panchromatic and pansharpened satellite imagery</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">3</span> Methodology</a>
+  <ul class="collapse">
+  <li><a href="#area-of-interest---spatial-and-temporal-delimitation" id="toc-area-of-interest---spatial-and-temporal-delimitation" class="nav-link" data-scroll-target="#area-of-interest---spatial-and-temporal-delimitation"><span class="header-section-number">3.1</span> Area of Interest - spatial and temporal delimitation</a></li>
+  <li><a href="#data-acquisition" id="toc-data-acquisition" class="nav-link" data-scroll-target="#data-acquisition"><span class="header-section-number">3.2</span> Data acquisition</a></li>
+  <li><a href="#data-preprocessing-challenges" id="toc-data-preprocessing-challenges" class="nav-link" data-scroll-target="#data-preprocessing-challenges"><span class="header-section-number">3.3</span> Data preprocessing challenges</a></li>
+  <li><a href="#resolution" id="toc-resolution" class="nav-link" data-scroll-target="#resolution"><span class="header-section-number">3.4</span> Resolution</a></li>
+  <li><a href="#dataset-training-and-test-data" id="toc-dataset-training-and-test-data" class="nav-link" data-scroll-target="#dataset-training-and-test-data"><span class="header-section-number">3.5</span> Dataset: training and test data</a></li>
+  <li><a href="#machine-learning-models-implementation-of-cart-svm-and-rf" id="toc-machine-learning-models-implementation-of-cart-svm-and-rf" class="nav-link" data-scroll-target="#machine-learning-models-implementation-of-cart-svm-and-rf"><span class="header-section-number">3.6</span> Machine learning models: implementation of CART, SVM, and RF</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">4</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#evaluation-cart-model" id="toc-evaluation-cart-model" class="nav-link" data-scroll-target="#evaluation-cart-model"><span class="header-section-number">4.1</span> Evaluation CART model</a></li>
+  <li><a href="#evaluation-random-forest-model" id="toc-evaluation-random-forest-model" class="nav-link" data-scroll-target="#evaluation-random-forest-model"><span class="header-section-number">4.2</span> Evaluation Random Forest model</a></li>
+  <li><a href="#evaluation-support-vector-machine" id="toc-evaluation-support-vector-machine" class="nav-link" data-scroll-target="#evaluation-support-vector-machine"><span class="header-section-number">4.3</span> Evaluation Support Vector Machine</a></li>
+  <li><a href="#unawatuna-beach-sand-changes-over-time-20192023" id="toc-unawatuna-beach-sand-changes-over-time-20192023" class="nav-link" data-scroll-target="#unawatuna-beach-sand-changes-over-time-20192023"><span class="header-section-number">4.4</span> Unawatuna Beach sand changes over time (2019–2023)</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a>
+  <ul class="collapse">
+  <li><a href="#evaluating-satellite-data-and-open-source-tools-for-monitoring-coastal-shoreline-fluctuations" id="toc-evaluating-satellite-data-and-open-source-tools-for-monitoring-coastal-shoreline-fluctuations" class="nav-link" data-scroll-target="#evaluating-satellite-data-and-open-source-tools-for-monitoring-coastal-shoreline-fluctuations"><span class="header-section-number">5.1</span> Evaluating satellite data and open-source tools for monitoring coastal shoreline fluctuations</a></li>
+  <li><a href="#interpretation-of-performance" id="toc-interpretation-of-performance" class="nav-link" data-scroll-target="#interpretation-of-performance"><span class="header-section-number">5.2</span> Interpretation of performance</a></li>
+  <li><a href="#evaluation-of-methodology-and-potential-for-improvement" id="toc-evaluation-of-methodology-and-potential-for-improvement" class="nav-link" data-scroll-target="#evaluation-of-methodology-and-potential-for-improvement"><span class="header-section-number">5.3</span> Evaluation of Methodology and potential for Improvement</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">book</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Norah Jones </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 16, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="titlepage">
+<div class="center">
+<p><strong>ZURICH UNIVERSITY OF APPLIED SCIENCES</strong><br>
+<strong>DEPARTMENT LIFE SCIENCES AND FACILITY MANAGEMENT</strong><br>
+<strong>INSTITUTE FOR COMPUTATIONAL LIFE SCIENCE</strong><br>
+</p>
+<p><strong>Monitoring of coastal changes using satellite imagery: A case study of Unawatuna</strong><br>
+<strong>Project Work 2</strong><br>
+</p>
+<p><strong>by</strong><br>
+<strong>Meggie Krymowski</strong><br>
+<strong>BSc Applied Digital Life Sciences 2022</strong><br>
+</p>
+<p><strong>12.12.2024</strong><br>
+</p>
+</div>
+<div class="flushleft">
+<p><strong>Corrector:</strong><br>
+<strong>Nils Ratnaweera</strong><br>
+</p>
+</div>
+</div>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Coastal areas, where land meets the sea, are dynamic environments shaped by the continuous interaction of natural forces such as wind and waves <span class="citation" data-cites="publishers_american_2000">(<a href="#ref-publishers_american_2000" role="doc-biblioref">Publishers 2000</a>)</span>. These forces contribute to the erosion and construction of geographical features like beaches, dunes and lagoons, resulting in constantly changing coastal landscapes <span class="citation" data-cites="weerasingha_coastal_2022">(<a href="#ref-weerasingha_coastal_2022" role="doc-biblioref">Weerasingha and Ratnayake 2022</a>)</span>. These transitional areas are characterized by high biodiversity and include fragile ecosystems like mangroves and coral reefs. However, they are also under significant pressure from urbanization and human activities, with more than half of the global population residing near coastlines. Coastal areas are among the most visited regions worldwide, with tourism being a major economic driver in many locations. These factors collectively contribute to the rapid transformation of coastal landscapes <span class="citation" data-cites="wasana_impact_2018">(<a href="#ref-wasana_impact_2018" role="doc-biblioref">Wasana 2018</a>)</span>.</p>
+<p>Unawatuna, situated on the southwestern coastline of Sri Lanka, is an iconic beach known for its unique semicircular shape, ecological richness, and popularity among tourists. It has been recognized internationally as one of the most attractive beaches in the world, featuring activities such as snorkeling, diving, and whale watching, as well as hosting diverse ecosystems, including coral reefs and mangroves. These natural and cultural assets make Unawatuna a vital area for tourism and local livelihoods <span class="citation" data-cites="rathnayake_negative_2015">(<a href="#ref-rathnayake_negative_2015" role="doc-biblioref">Rathnayake 2015</a>)</span>. However, the impacts of erosion, seasonal fluctuations, and human activities, especially those associated with tourism, have raised concerns about the long-term stability and preservation of Unawatuna Beach. Traditional monitoring methods, such as field surveys, are often resource-intensive and may not provide consistent or comprehensive data over time <span class="citation" data-cites="silveira_optimizing_2013">(<a href="#ref-silveira_optimizing_2013" role="doc-biblioref">Silveira et al. 2013</a>)</span>. Satellite imagery offers a promising alternative for addressing these challenges, enabling large-scale and cost-effective monitoring of beach changes. This project focuses on this questions:</p>
+<ul>
+<li><p>What methodology would be capable of reliably monitor and quantify sand dune fluctuations along the Sri Lankan coastline?</p></li>
+<li><p>What types of publicly available satellite data can be used to observe sand dune fluctuations?</p></li>
+<li><p>Which free and open-source software tools are best suited for analyzing satellite data to monitor sand dune fluctuations along the Sri Lankan coastline?</p></li>
+<li><p>How can the accuracy and reliability of the monitoring methods be evaluated?</p></li>
+</ul>
+</section>
+<section id="theoretical-framework" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Theoretical Framework</h1>
+<section id="understanding-satellites-definition-and-common-features" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="understanding-satellites-definition-and-common-features"><span class="header-section-number">2.1</span> Understanding satellites: definition and common features</h2>
+<p>A satellite is an object that orbits around a larger celestial body due to gravitational forces. Natural satellites, such as the Earth orbiting the Sun or the Moon orbiting the Earth, are formed through natural processes and are an integral part of the universe’s structure. These celestial objects differ from artificial satellites, which are human-engineered and serve human-centric purposes.</p>
+<p>The term <em>satellite</em> is most commonly associated with artificial satellites mechanisms designed and constructed by humans to perform a variety of tasks. These artificial satellites are launched into orbit around Earth or other celestial bodies to support diverse applications, including communication, Earth observation, navigation, and scientific exploration (Adams, 2017). Their versatility and functional diversity make them invaluable tools for advancing scientific knowledge, technological progress, and global connectivity.</p>
+<p>Despite their varied applications, all satellites share fundamental operational features. A primary requirement is a reliable power source, typically solar panels, combined with a storage battery to ensure uninterrupted operation during periods without sunlight. As solar irradiance decreases proportionally to the square of the distance from the Sun (or any spherical source), it quickly becomes insufficient for powering satellites far beyond Earth’s orbit. Consequently, satellites operating at greater distances from the Sun depend on radioisotope thermoelectric generators (RTGs), which provide both electricity and heat to maintain equipment at operational temperatures <span class="citation" data-cites="nasa_cassinis_nodate">(<a href="#ref-nasa_cassinis_nodate" role="doc-biblioref">NASA n.d.</a>)</span>. These energy systems enable satellites to sustain their core functions, including data acquisition, communication, and maneuvering in orbit. This combination of power, communication, and navigation systems underpins the essential functionality of satellites, making them adaptable to a broad range of tasks in space.</p>
+</section>
+<section id="publicly-available-satellite-data-and-platforms-for-monitoring-coastal-shoreline-dynamics-a-comprehensive-overview" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="publicly-available-satellite-data-and-platforms-for-monitoring-coastal-shoreline-dynamics-a-comprehensive-overview"><span class="header-section-number">2.2</span> Publicly available satellite data and platforms for monitoring coastal shoreline dynamics: a comprehensive overview</h2>
+<section id="copernicus-browser" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="copernicus-browser"><span class="header-section-number">2.2.1</span> Copernicus Browser</h3>
+<p>The Copernicus Browser is a vital online platform providing free and open access to geospatial data and imagery from the European Union’s Copernicus Earth Observation Program, managed by the European Space Agency (ESA). It grants users access to an extensive range of datasets, particularly from the Sentinel satellite constellation, enabling the detailed exploration of Earth’s surface for scientific, environmental, and commercial applications.<br>
+The data is available in standard geospatial formats, such as GeoTIFF for raster imagery, ensuring seamless compatibility with geospatial analysis tools like QGIS, R, and Python. Users can download imagery at various resolutions, including 10m, 20m, and 60m, catering to different project requirements and levels of detail <span class="citation" data-cites="sinergise_solutions_copernicus_nodate">(<a href="#ref-sinergise_solutions_copernicus_nodate" role="doc-biblioref">Sinergise Solutions n.d.</a>)</span>.</p>
+</section>
+<section id="planetscope-free-access-under-specific-conditions" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="planetscope-free-access-under-specific-conditions"><span class="header-section-number">2.2.2</span> PlanetScope: free access under specific conditions</h3>
+<p>PlanetScope is a satellite platform operated by the company Planet, featuring a constellation of approximately 130 satellites. This constellation is capable of imaging the entire land surface of Earth every day, covering an impressive 200 million km² per day. The satellite imagery has a resolution of 3 meters per pixel, making it well-suited for detailed environmental and spatial analyses.<br>
+A PlanetScope Scene Product represents a single framed image captured as part of the satellite’s continuous line-scan of the Earth’s surface. These scenes are individual segments within a strip of imagery, overlapping with one another, and are not aligned to a specific tiling grid system. This format allows for flexible use, but requires additional processing for some applications.<br>
+One of the most remarkable aspects of PlanetScope is its accessibility. The platform offers freely available data samples and provides free access for students, academic researchers, and humanitarian projects through the Planet Education and Research Program <span class="citation" data-cites="planet_planetscope_2024">(<a href="#ref-planet_planetscope_2024" role="doc-biblioref">Planet 2024a</a>)</span>.<br>
+While PlanetScope boasts an impressive daily collection capacity and frequent revisits, its affordability and accessibility are perhaps its most standout features, ensuring that high-quality satellite data is available for a wide range of users and applications.</p>
+</section>
+<section id="rapideye-discontinued-in-2020" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="rapideye-discontinued-in-2020"><span class="header-section-number">2.2.3</span> RapidEye (discontinued in 2020)</h3>
+<p>RapidEye, a satellite constellation, was in operation from 2009 to 2020 and was developed by the company Planet, which also operates PlanetScope, as mentioned earlier. The constellation consisted of five high-resolution satellites, each capable of capturing imagery with a spatial resolution of approximately 5 meters per pixel <span class="citation" data-cites="planet_rapideye_2024">(<a href="#ref-planet_rapideye_2024" role="doc-biblioref">Planet 2024b</a>)</span>.<br>
+RapidEye’s sensors captured imagery across five spectral bands: Red, Green, Blue, Red Edge, and Near Infrared. This capability made RapidEye highly valuable for applications in agriculture, forestry, and environmental monitoring. Furthermore, more than 70% of the images were acquired with a view angle of less than 10°, with a maximum view angle limited to 20°, ensuring minimal distortion and consistent high-quality data <span class="citation" data-cites="esa_rapideye_nodate">(<a href="#ref-esa_rapideye_nodate" role="doc-biblioref">ESA n.d.</a>)</span>.<br>
+The extensive archive of RapidEye imagery is available for research and educational purposes upon request, free of charge <span class="citation" data-cites="planet_planet_nodate">(<a href="#ref-planet_planet_nodate" role="doc-biblioref">Planet n.d.</a>)</span>. This historical archive remains a critical resource for studying and analyzing changes in the Earth’s surface over time.</p>
+</section>
+</section>
+<section id="free-and-open-source-software-tools-that-could-be-used-for-monitoring-coastal-shoreline-fluctuations" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="free-and-open-source-software-tools-that-could-be-used-for-monitoring-coastal-shoreline-fluctuations"><span class="header-section-number">2.3</span> Free and open-Source software Tools that could be used for monitoring coastal shoreline fluctuations</h2>
+<section id="qgis-strengths-and-limitations-in-geospatial-analysis" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="qgis-strengths-and-limitations-in-geospatial-analysis"><span class="header-section-number">2.3.1</span> QGIS: strengths and limitations in geospatial analysis</h3>
+<p>QGIS (Quantum Geographic Information System) is open-source, cross-platform software for efficient geospatial data management, visualization, analysis, and mapping. It is valued for its accessibility, flexibility, and integration capabilities across various geospatial technologies. One of the primary advantages of QGIS is its cost-effectiveness. As free software, it eliminates the financial barrier associated with many proprietary GIS platforms. It supports a wide range of vector and raster file formats. This compatibility allows users to work with nearly any geospatial data type, including shapefiles and GeoTIFFs <span class="citation" data-cites="map-site_qgis_nodate">(<a href="#ref-map-site_qgis_nodate" role="doc-biblioref">Map-site n.d.</a>)</span>.<br>
+For temporal or dynamic data, QGIS provides tools like TimeManager, which enables users to visualize changes over time. This is particularly useful for monitoring environmental changes <span class="citation" data-cites="map-site_qgis_nodate">(<a href="#ref-map-site_qgis_nodate" role="doc-biblioref">Map-site n.d.</a>)</span>.<br>
+QGIS is also highly extensible, offering a vast library of plug-ins to enhance its functionality. These plug-ins allow users to perform specialized tasks, such as georeferencing raster data, creating temporal animations, and automating processes through batch operations. The active development community continuously contributes new plug-ins and updates, ensuring that QGIS remains a dynamic and evolving tool. Another strength of QGIS is its user-friendly interface, which lowers the learning curve for beginners. Tutorials and extensive online resources make it accessible even for users with little to no prior experience in GIS. The software also supports advanced functionality, such as 3D visualization, time-series analysis, and complex spatial queries, making it suitable for both basic and advanced geospatial tasks.<br>
+While QGIS is highly versatile, it does have limitations. The software integrates well with external tools, however, machine/deep learning and some other advanced geospatial tasks require additional software. For instance, QGIS does not natively support models like Convolutional Neural Networks (CNNs) or the Segment Anything Model (SAM), which are often essential for tasks like automated object detection and image segmentation in remote sensing <span class="citation" data-cites="gillian_qgis_nodate">(<a href="#ref-gillian_qgis_nodate" role="doc-biblioref">Gillian n.d.</a>)</span>.</p>
+</section>
+<section id="geospatial-analysis-using-python-libraries" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="geospatial-analysis-using-python-libraries"><span class="header-section-number">2.3.2</span> Geospatial analysis using python libraries</h3>
+<p>Python provides a comprehensive ecosystem for geospatial analysis, supporting a wide range of workflows, from preprocessing and analyzing raster and vector data to implementing advanced machine learning techniques. Its libraries, such as rasterio, geopandas, and xarray, are designed to handle geospatial data efficiently. For raster data, rasterio allows users to read, write, and manipulate formats like GeoTIFF, while geopandas extends Pandas to support spatial operations for vector data, including spatial joins and reprojections. Additionally, xarray enables the analysis of multidimensional raster datasets, such as time-series or climate data.<br>
+Python’s integration with deep learning frameworks, such as TensorFlow and PyTorch, makes it particularly suited for complex geospatial tasks. Convolutional Neural Networks (CNNs) are widely implemented for tasks like land cover classification, object detection, and semantic segmentation. Models such as UNet, optimized for image segmentation, are frequently applied to delineate detailed land use patterns or identify structures in satellite imagery. Python also supports tools like the Segment Anything Model (SAM), which generalizes segmentation tasks across diverse datasets using minimal user input. SAM’s transformer-based architecture allows it to identify features like buildings, vegetation, or land boundaries in high-resolution imagery efficiently. These frameworks leverage GPU acceleration, allowing for the processing of large datasets <span class="citation" data-cites="setu_segment_2024">(<a href="#ref-setu_segment_2024" role="doc-biblioref">Setu et al. 2024</a>)</span>.<br>
+Visualization is another area where Python offers strengths. Libraries such as folium and plotly enable the creation of interactive maps, while matplotlib and cartopy provide robust tools for static visualizations with geospatial overlays. Python’s ability to connect with cloud-based platforms, such as Google Earth Engine (GEE), further enhances its capacity to process and analyze large-scale geospatial datasets without the need for significant local infrastructure.<br>
+However, Python’s complexity can be a drawback. Its workflows often require combining multiple libraries, which can increase development time and lead to steeper learning curves. Additionally, while Python supports high-performance tasks like deep learning, setting up the required environment, including GPU dependencies, can be resource-intensive and technically demanding. For visualization, while Python provides dynamic tools, creating highly customized or publication-quality outputs may require additional effort compared to other geospatial tools <span class="citation" data-cites="priyadharshini_r_2015">(<a href="#ref-priyadharshini_r_2015" role="doc-biblioref">Priyadharshini 2015</a>)</span>.<br>
+In summary, Python’s geospatial libraries are well-suited for handling raster and vector data, integrating machine learning and deep learning techniques, and supporting cloud-based workflows. While its flexibility and advanced tools provide significant capabilities, they also introduce complexity that may require technical expertise and time to manage effectively.</p>
+</section>
+<section id="r-for-remote-sensing-capabilities-and-limitations" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="r-for-remote-sensing-capabilities-and-limitations"><span class="header-section-number">2.3.3</span> R for remote sensing: capabilities and limitations</h3>
+<p>R has become a widely used tool for remote sensing analysis due to its extensive library of packages, its flexibility, and its ability to handle large spatial datasets. Remote sensing involves deriving valuable insights from satellite imagery or other remote platforms, often requiring extensive preprocessing, analysis, and visualization. With specialized packages like terra, sf, and stars, R provides robust solutions for many aspects of remote sensing workflows, from raster data handling to vector geometry operations.<br>
+The terra package is a key tool for raster data processing in R, succeeding the raster package with enhanced efficiency for large datasets. Raster data, commonly derived from satellite imagery like Sentinel-2 or Landsat, represents spatially continuous information. With terra, users can manage multi-band rasters, crop to areas of interest, normalize reflectance values, and perform raster algebra for tasks such as NDVI (Normalized Difference Vegetation Index) calculations <span class="citation" data-cites="ghosh_remote_2023">(<a href="#ref-ghosh_remote_2023" role="doc-biblioref">Ghosh and Hijmans 2023</a>)</span>. Its built-in functions for processing large files without exhausting memory make it particularly suitable for handling data from modern satellite missions, where file sizes can be enormous. It is also Supporting formats like GeoTIFF and JP2 <span class="citation" data-cites="wasser_how_2017">(<a href="#ref-wasser_how_2017" role="doc-biblioref">Wasser 2017</a>)</span>.<br>
+The sf package complements terra by focusing on vector data, such as points, lines, and polygons, which represent boundaries, infrastructure, or sampling locations. It adheres to the Simple Features standard, enabling seamless work with vector geometries and integration with raster datasets. This allows for workflows like extracting raster values for polygons or performing spatial overlays. The package integrates well with R’s data manipulation and visualization tools, such as dplyr and ggplot2, making it easy to create maps and conduct spatial analysis.<br>
+For multidimensional datasets, the stars package offers a specialized approach, particularly for spatiotemporal data. Designed to handle raster cubes with dimensions like time and spectral bands, it is ideal for monitoring changes over time, such as vegetation dynamics or coastal erosion. Stars also integrates with sf for overlaying vector geometries on raster datasets, making it a valuable addition to R’s remote sensing ecosystem, despite being less widely adopted than terra <span class="citation" data-cites="ghosh_remote_2023">(<a href="#ref-ghosh_remote_2023" role="doc-biblioref">Ghosh and Hijmans 2023</a>)</span>.<br>
+When it comes to machine learning, R provides interfaces to frameworks like Keras and TensorFlow, enabling users to build and train neural networks for tasks such as land cover classification or object detection. In addition to these deep learning capabilities, R supports supervised learning models like random forests and support vector machines, as well as unsupervised methods like k-means clustering or hierarchical clustering. These methods are well-suited for tasks such as identifying land use patterns or segmenting satellite imagery based on spectral properties. While R is capable of implementing deep learning models, its adoption for advanced architectures like Convolutional Neural Networks (CNNs) is less common, particularly compared to Python. Unfortunately, tools like SAM are not readily available in R, requiring researchers to rely on Python for these capabilities. Nevertheless, R remains effective for many machine learning tasks in remote sensing, especially when focusing on traditional models and workflows that prioritize statistical and geospatial analysis <span class="citation" data-cites="priyadharshini_r_2015">(<a href="#ref-priyadharshini_r_2015" role="doc-biblioref">Priyadharshini 2015</a>)</span>.<br>
+Visualization is another area where R shows both strength and limitations. R’s ggplot2 and tmap are exceptional for creating static and high-quality visualizations. However, when it comes to dynamic and interactive visualizations of large datasets, tools like Python’s folium outperform R. While R’s leaflet package does provide interactivity, it lacks some of the advanced features required for visualizing large geospatial datasets interactively <span class="citation" data-cites="chege_comparing_2024">(<a href="#ref-chege_comparing_2024" role="doc-biblioref">Chege 2024</a>)</span>.<br>
+In conclusion, R is a powerful tool for remote sensing analysis, offering exceptional capabilities for raster and vector data processing through terra and sf, and advanced spatiotemporal analysis through stars. Its strengths lie in statistical modeling, data visualization, supervised learning, unsupervised learning, and integrating geospatial analysis with dashboards, such as those built with R Shiny. However, tasks involving deep learning workflows or highly specialized models like UNet or SAM are often better handled in Python.<br>
+</p>
+</section>
+</section>
+<section id="panchromatic-and-pansharpened-satellite-imagery" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="panchromatic-and-pansharpened-satellite-imagery"><span class="header-section-number">2.4</span> Panchromatic and pansharpened satellite imagery</h2>
+<p>Panchromatic and pansharpened satellite imagery are essential tools in remote sensing, offering enhanced capabilities for observing and analyzing Earth’s surface. Panchromatic imagery, often abbreviated as PAN imagery, is a single-channel grayscale image that integrates visible light wavelengths red, green, and blue into a single band. This approach sacrifices spectral detail for improved spatial resolution, making it ideal for capturing fine surface features. The information contained in each pixel of a panchromatic image directly reflects the total intensity of solar radiation reflected by objects within the pixel and detected by the satellite sensor. As a result, PAN imagery provides sharp and detailed images that are highly suitable for spatial analysis <span class="citation" data-cites="shanshan_panchromatic_2022">(<a href="#ref-shanshan_panchromatic_2022" role="doc-biblioref">Shanshan 2022</a>)</span>.<br>
+A panchromatic band by itself produces black and white images with high spatial resolution. For example, satellites like Landsat 7 and 8 offer panchromatic images with a resolution of 15 meters per pixel, which is significantly higher than the 30-meter resolution of their multispectral counterparts. This higher resolution allows panchromatic imagery to assist individual spectral bands by making them "sharper," enhancing the visual and analytical clarity of satellite data <span class="citation" data-cites="eos_data_analytic_panchromatic_2021">(<a href="#ref-eos_data_analytic_panchromatic_2021" role="doc-biblioref">Analytic 2021</a>)</span>.<br>
+One of the most significant applications of panchromatic imagery is its role in panchromatic sharpening, or pansharpening. This process fuses the high-resolution spatial data from panchromatic images with the spectral information from lower-resolution multispectral images. The resulting pansharpened image combines the best of both worlds: the spatial resolution of the panchromatic image and the spectral richness of the multispectral data. Pansharpening produces high-resolution color images that are more visually detailed and analytically useful for various applications. This fusion process has proven particularly beneficial for mapping land use, monitoring vegetation, and studying urban environments. By enhancing the spatial detail while preserving spectral attributes, pansharpening enables more accurate classification of surface features and clearer delineation of boundaries <span class="citation" data-cites="mcauliffe_panchromatic_2021">(<a href="#ref-mcauliffe_panchromatic_2021" role="doc-biblioref">McAuliffe 2021</a>)</span>.<br>
+The process of pansharpening relies on techniques that integrate the complementary strengths of panchromatic and multispectral imagery. Various methods are used, including HSV sharpening and Gram-Schmidt pansharpening. Each method offers specific advantages, depending on the application. For example, HSV sharpening works within the HSV color space, where <em>H</em> stands for hue, <em>S</em> for saturation, and <em>V</em> for value (brightness). In this method, the high-resolution panchromatic data replaces the lower-resolution <em>value</em> component of the multispectral image, while the hue and saturation components remain unchanged. This ensures the resulting image retains its original color characteristics but with improved sharpness and detail derived from the panchromatic band. This approach is straightforward and computationally efficient, making it widely used for applications requiring enhanced visuals <span class="citation" data-cites="arcgis_grundlagen_nodate">(<a href="#ref-arcgis_grundlagen_nodate" role="doc-biblioref">ArcGIS n.d.</a>)</span>.<br>
+On the other hand, Gram-Schmidt pansharpening is a more complex method that models the panchromatic band as a linear combination of the multispectral bands. This technique simulates a panchromatic band from the spectral information of the multispectral image, aligning it with the actual high-resolution panchromatic data. The simulated and actual data are then fused to create a highly accurate pansharpened image. Gram-Schmidt pansharpening is particularly effective in applications where preserving the spectral integrity of the multispectral data is critical, such as in scientific studies of vegetation health or water quality <span class="citation" data-cites="arcgis_grundlagen_nodate">(<a href="#ref-arcgis_grundlagen_nodate" role="doc-biblioref">ArcGIS n.d.</a>)</span>.</p>
+</section>
+</section>
+<section id="methodology" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Methodology</h1>
+<section id="area-of-interest---spatial-and-temporal-delimitation" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="area-of-interest---spatial-and-temporal-delimitation"><span class="header-section-number">3.1</span> Area of Interest - spatial and temporal delimitation</h2>
+<p>The project focuses on a specific area in Sri Lanka, with particular attention to the coastal region of Unawatuna, as shown in <a href="#fig-Unawatuna" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>. The spatial delimitation encompasses a defined area within the coordinates, extending approximately from 6.0048°N, 80.2422°E in the southwest to 6.0112°N, 80.2534°E in the northeast. This area was chosen due to the presence of a distinct sandbank, which provides a clear and measurable feature for analysis. The temporal delimitation of this analysis spans a five-year period from 2019 to 2023, with the goal of identifying any changes in the beach during this timeframe.</p>
+<div id="fig-Unawatuna" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Unawatuna-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Unawantuna_Copernicushub/Unawatuna_pin.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Unawatuna-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Location of Unawatuna Beach, Sri Lanka. This map highlights the position of Unawatuna on the southern coastline of Sri Lanka, marked by the yellow pin
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="data-acquisition" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="data-acquisition"><span class="header-section-number">3.2</span> Data acquisition</h2>
+<p>The satellite data for the project was sourced from Sentinel Hub, covering a 5-year period. The data was downloaded as SAFE files, which is the standard format for Sentinel satellite data. Initially, the complete dataset for the region was acquired. In a subsequent step, the data was cropped to focus specifically on the area of interest.<br>
+To ensure data quality, it was crucial to select images captured on clear days with minimal cloud coverage over the target beach area. Each image was manually inspected to verify clarity and relevance before being added to the dataset. This approach ensured that the dataset was reliable and suitable for subsequent analysis.</p>
+</section>
+<section id="data-preprocessing-challenges" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="data-preprocessing-challenges"><span class="header-section-number">3.3</span> Data preprocessing challenges</h2>
+<p>The first step after downloading the satellite images was to manually annotate the data, as no pre-labeled datasets were available, as shown in <a href="#fig-sentinel_una" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>. In the absence of preexisting training and testing datasets, manual annotation of the satellite images from Sri Lanka was performed using QGIS.<br>
+</p>
+<div id="fig-sentinel_una" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sentinel_una-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Unawantuna_Copernicushub/Screenshot 2024-12-11 at 18.19.48.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sentinel_una-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Cropped Sentinel-2 imagery of Unawatuna Beach. The figure shows the original Sentinel-2 data with a spatial resolution of 20 meters, cropped to focus on the Unawatuna coastal region.
+</figcaption>
+</figure>
+</div>
+<p>A GeoPackage layer was created to classify the imagery into four categories: <em>Sand, Buildings, Water, and Forest.</em> These categories were defined based on their distinct spectral levels, which cannot be easily mixed or generalized. By distinguishing between these features, the categorization ensured specificity and improved the accuracy of subsequent analysis.<br>
+Precise labeling proved challenging due to the low resolution of the downloaded satellite data, which resulted in significant pixelation and made it difficult to reliably differentiate between the categories. To address this issue, high-resolution ESRI satellite imagery was used as a reference to ensure accurate labeling, illustrated in <a href="#fig-comparison-unawatuna-label" class="quarto-xref">Figure&nbsp;<span>3.3</span></a>. However, ESRI imagery is limited to current data and does not provide historical coverage, making it unsuitable for temporal analysis. To complement this, Sentinel-2 data was employed to access a multi-year temporal archive, enabling the analysis of changes over time despite its lower resolution.</p>
+<div id="fig-comparison-unawatuna-label" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comparison-unawatuna-label-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-label-without-esri" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-label-without-esri-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Unawantuna_Copernicushub/Labelling_without_esri.png" class="img-fluid figure-img" data-ref-parent="fig-comparison-unawatuna-label">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-label-without-esri-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Unawatuna viewpoint without ESRI
+</figcaption>
+</figure>
+</div>
+<div id="fig-label-with-esri" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-label-with-esri-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Unawantuna_Copernicushub/Labelling with_Esri.png" class="img-fluid figure-img" data-ref-parent="fig-comparison-unawatuna-label">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-label-with-esri-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Unawatuna viewpoint with ESRI
+</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comparison-unawatuna-label-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: Comparison of Unawatuna Viewpoints with and without ESRI Imagery. (a) Displays the Unawatuna region visualized without ESRI basemap imagery, highlighting spatial features with limited background resolution. (b) Shows the same region with ESRI imagery, providing enhanced detail and context for the spatial data.
+</figcaption>
+</figure>
+</div>
+<p>The integration of manual geospatial annotation in QGIS, precise class-specific labeling with a GeoPackage, and the inclusion of multiple Sentinel-2 bands laid the groundwork for constructing a comprehensive training dataset. This dataset serves as the foundation for training the machine learning model.</p>
+</section>
+<section id="resolution" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="resolution"><span class="header-section-number">3.4</span> Resolution</h2>
+<p>When downloading data from Corpernicus Browser, the SAFE package provides three different spatial resolutions: 10m, 20m, and 60m. However, not all spectral bands are available at all resolutions. Generally, as the spatial resolution increases, fewer bands are included.<br>
+For instance, at the 10m resolution, only the following bands are available: B2, B3, B4, and B8. These bands are primarily focused on visible and near-infrared (NIR) light:</p>
+<ul>
+<li><p>B2 (Blue): Sensitive to water bodies and atmospheric corrections.</p></li>
+<li><p>B3 (Green): Highlights vegetation health and serves as a general-purpose visible band.</p></li>
+<li><p>B4 (Red): Crucial for vegetation analysis and differentiating between vegetation and soil.</p></li>
+<li><p>B8 (NIR): This band could be used for the NDVI, which would help to differentiate the borders of the vegetation to the beach.</p></li>
+</ul>
+<p>In contrast, the 20m resolution offers a more comprehensive range of bands, including B1–B8A, B11, and B12. These additional bands provide extended spectral information for more detailed remote sensing analyses, which could help to specify the data <span class="citation" data-cites="gisgeography_sentinel_2019">(<a href="#ref-gisgeography_sentinel_2019" role="doc-biblioref">GISGeography 2019</a>)</span>:</p>
+<ul>
+<li><p>B5 (Red Edge): This band could be used to detect transition between visible red and near-infrared (NIR). It may help identify shifts in vegetation that interact with dynamic beach environments.</p></li>
+<li><p>B6 (NIR): This band could provide insights into variations in vegetation structure near the beach.</p></li>
+<li><p>B7 (NIR): This band could refine the detection of subtle vegetation changes, such as identifying sparse vegetation growth on or near sand dunes, supporting long-term environmental monitoring.</p></li>
+<li><p>B8A (NIR): This band could enhance the precision of detecting land cover changes, such as transitions between sandy surfaces, vegetation, and human-made structures.</p></li>
+<li><p>B11 (SWIR 1): This band could be used to detect moisture levels in sandy areas.</p></li>
+<li><p>B12 (SWIR 2): This band could help distinguish between sand, vegetation, and other surface materials, making it valuable for analyzing erosion patterns and mapping changes in beach morphology.</p></li>
+</ul>
+<p>For the initial analysis, all available bands at the 20m resolution were utilized for training, as the relative importance of individual bands has not yet been determined. This comprehensive approach ensures no potentially relevant spectral information is overlooked, offering flexibility in identifying the most impactful bands for specific applications.</p>
+</section>
+<section id="dataset-training-and-test-data" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="dataset-training-and-test-data"><span class="header-section-number">3.5</span> Dataset: training and test data</h2>
+<p>To train the machine learning models, it was essential to create a training dataset, as demonstrated in <a href="#fig-labels" class="quarto-xref">Figure&nbsp;<span>3.4</span></a>. This dataset was generated using a cropped region of Unawatuna, based on a recent satellite image. The training process utilized the entire image from this region to ensure comprehensive coverage. For testing, separate beaches from other regions within the downloaded satellite data of Sri Lanka were selected as the test dataset.</p>
+<div id="fig-labels" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-labels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Unawantuna_Copernicushub/Labbeling.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-labels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: Training data overlaid on Sentinel-2 Imagery of Unawatuna Beach. This figure shows the Sentinel-2 satellite image of the Unawatuna coastal region with training data points overlaid. Each point represents labeled data used for training a classification model, with classes corresponding to features such as Forest, Water, Buildings and Sand. The training data is critical for calibrating the model to accurately classify and monitor coastal features based on the spectral information in the imagery
+</figcaption>
+</figure>
+</div>
+<p>The decision to use test data from the same satellite imagery and within Sri Lanka was based on the need to maintain consistency in environmental features such as vegetation. Vegetation can vary significantly across regions, potentially introducing discrepancies in model accuracy if vastly different environments were used. For instance, buildings in coastal areas like Barcelona differ greatly from those in Sri Lanka. In Barcelona, structures are often taller with flat rooftops, while in Sri Lanka, houses typically have red-tiled roofs and are shorter.<br>
+The test dataset comprised two different beaches, chosen based on their size and the presence of prominent sandbanks, ensuring that they were suitable for validation. Labels were manually added to these areas to verify the accuracy of the models during the evaluation phase.</p>
+</section>
+<section id="machine-learning-models-implementation-of-cart-svm-and-rf" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="machine-learning-models-implementation-of-cart-svm-and-rf"><span class="header-section-number">3.6</span> Machine learning models: implementation of CART, SVM, and RF</h2>
+<p>Three machine learning models were selected for this project: CART (Classification and Regression Tree), Random Forest (RF), and Support Vector Machine (SVM). The first model implemented in the project was the simplest one, the CART model. CART models generate decision trees that are intuitive and easy to interpret. Each split in the tree corresponds to a condition derived from the input data, demonstrating how the model classifies the data. For example, the tree typically classifies the input as follows:</p>
+<ul>
+<li><p>If <span class="math inline">\(NDVI &gt; 0.5 \rightarrow\)</span> Forest.</p></li>
+<li><p>If <span class="math inline">\(NDVI \leq 0.5 \, \text{and} \, B3 &lt; 0.1 \rightarrow\)</span> Water.</p></li>
+</ul>
+<p>The second model implemented in this project was the Random Forest model, a machine learning algorithm that operates by constructing multiple decision trees during training and aggregating their outputs to make final predictions <span class="citation" data-cites="belgiu_random_2016">(<a href="#ref-belgiu_random_2016" role="doc-biblioref">Belgiu and Drăguţ 2016</a>)</span>. This ensemble approach enhances accuracy and reduces overfitting, as the diversity among trees helps capture complex patterns in the data while minimizing errors <span class="citation" data-cites="donges_random_2024">(<a href="#ref-donges_random_2024" role="doc-biblioref">Donges 2024</a>)</span>.<br>
+The final model implemented in the project was the SVM model. SVMs are commonly used for binary classification tasks, such as differentiating between <em>Sand</em> and <em>No-Sand</em> <span class="citation" data-cites="selvaraju_support_2021">(<a href="#ref-selvaraju_support_2021" role="doc-biblioref">Selvaraju et al. 2021</a>)</span>. However, in geospatial image classification, the complexity of the data often requires distinguishing between more than two classes. In this project, the classification involves four land cover types: <em>Building, Sand, Water, and Forest.</em> To handle this, multi-class classification is applied, which is automatically supported in R through the caret and e1071 packages.<br>
+Unlike binary classification, where the model separates two classes, multi-class classification requires the algorithm to differentiate between multiple classes simultaneously. The SVM achieves this by using a One-vs-One (OvO) strategy, where multiple binary classifiers are created to compare each possible pair of classes, as shown in Table <a href="#table1" data-reference-type="ref" data-reference="table1">1</a>. Specifically, the algorithm generates six binary classifiers for this dataset with the four classes <span class="citation" data-cites="xiao_enhancing_2021">(<a href="#ref-xiao_enhancing_2021" role="doc-biblioref">Xiao et al. 2021</a>)</span>.</p>
+<div id="table1">
+<table class="caption-top table">
+<caption>Pairwise classifiers in the Multi-Class SVM approach. This table lists the binary classifiers used to differentiate between pairs of classes in the multi-class Support Vector Machine (SVM) methodology. Each classifier is trained to distinguish between two specific classes, forming the basis for the overall classification model.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Classifier</strong></th>
+<th style="text-align: left;"><strong>Classes compared</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Building vs.&nbsp;Sand</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Building vs.&nbsp;Water</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Building vs.&nbsp;Forest</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Sand vs.&nbsp;Water</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Sand vs.&nbsp;Forest</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Water vs.&nbsp;Forest</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Each of these classifiers is trained independently, and during prediction, every classifier votes for one of the two classes it was designed to distinguish. The final class assigned to a pixel is determined by aggregating the votes from all classifiers, selecting the class with the highest number of votes. This process allows the SVM to effectively handle multi-class problems without requiring manual adjustments or additional configurations <span class="citation" data-cites="mountrakis_support_2011">(<a href="#ref-mountrakis_support_2011" role="doc-biblioref">Mountrakis, Im, and Ogole 2011</a>)</span>.</p>
+<p>The caret and e1071 packages in R simplify this process by automatically implementing the OvO strategy and managing the aggregation of classifier results <span class="citation" data-cites="xiao_enhancing_2021">(<a href="#ref-xiao_enhancing_2021" role="doc-biblioref">Xiao et al. 2021</a>)</span>.</p>
+</section>
+</section>
+<section id="results" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Results</h1>
+<section id="evaluation-cart-model" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="evaluation-cart-model"><span class="header-section-number">4.1</span> Evaluation CART model</h2>
+<p>The implementation of the CART model is straightforward, making it simple to interpret and apply. This model was used to evaluate whether the classification of <em>Sand</em> versus <em>No-Sand</em> is achievable with the satellite data utilized in this project.</p>
+<p>To assess the performance of the CART model, it was trained on a labeled dataset, and its results on the training data were visualized, as shown in <a href="#fig-CArt_train" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>. For the <em>Sand</em> class, a reclassification matrix was applied, where all categories except <em>Sand</em> were set to 0. The resulting visualization demonstrates that the model performs well in distinguishing <em>Sand</em> from other categories, highlighting its potential for <em>Sand</em> classification tasks.</p>
+<div id="fig-CArt_train" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CArt_train-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="CART_Model/Trainingdata_CART_Results.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CArt_train-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: CART Model training data classification accuracy. The figure illustrates the classification accuracy of the CART model for the training dataset, using the same imagery it was trained on.
+</figcaption>
+</figure>
+</div>
+<p>This demonstrates that the satellite data used in the project is capable of distinguishing between classes, even at a resolution of 20 meters. This confirms that the selected satellite data is suitable for further steps in the project. To quantify this, the confusion matrix generated from the CART model is analyzed, as illustrated in <span class="quarto-unresolved-ref">?fig-Cart</span> accuracy. As anticipated, since the same image used for training was also used for evaluation, the accuracy is relatively high, with a value of 0.96%.</p>
+<p>The CART model performs particularly well in predicting <em>Sand</em>, correctly classifying 33 points. The <em>Building</em> class was misclassifying 4 times. However, the model shows limitations in distinguishing between <em>Building</em> and <em>Forest</em>.</p>
+<p>:::{#fig-Cart accuracy} <img src="CART_Model/CART TRAIN_CONF.png" class="img-fluid"></p>
+<p>Confusion Matrix for CART Model Predictions on Training Data. This figure presents the confusion matrix and classification statistics for the CART model applied to the training dataset. The model achieved an overall accuracy of 96.64%, with particularly high performance for the Sand class, achieving perfect sensitivity (1.000) and specificity (0.9884), indicating its ability to classify sand pixels accurately. However, the model struggled slightly with the Building class, where some instances were misclassified as Forest or Sand, reflected in a sensitivity of 0.8519 for Building. :::</p>
+<p>To understand why the CART model struggles to differentiate between <em>Building</em> and <em>Forest,</em> the decision tree was analyzed. It is also essential to identify which bands were utilized for the predictions to determine which ones provide the most valuable information. The CART model selected Bands 02, 05, 06, and 07 from the available set, indicating that these bands currently hold the most significant information for the given training dataset.</p>
+<p>:::{#fig-Cart Decisiontree} <img src="CART_Model/CART on Training Data: Decision Tree.png.png" class="img-fluid"></p>
+<p>CART Decision Tree Model. The model uses thresholds from Sentinel-2 spectral bands B02, B05, B06, and B07 to make hierarchical decisions. :::</p>
+<p>The <em>Building</em> class is predicted in the leftmost leaf node. In this node, the model predicts <em>Building</em> with 100% confidence (1.00 in the matrix). However, this node only accounts for 19% of the total data, suggesting that the <em>Building</em> class is not well-represented across the training dataset. This limited representation might contribute to the model’s difficulty in accurately distinguishing between <em>Building</em> and other classes, such as <em>Forest.</em></p>
+<p>The performance of the trained CART model was evaluated on a different area within the same satellite image, separate from the region used for training. This visualization displays in <span class="quarto-unresolved-ref">?fig-Model</span> labels the labeled data for Beach 1, showing the different classes overlaid on the RGB image. A substantial number of labels were created to evaluate the reliability and performance of the CART model.</p>
+<p>:::{#fig-Model labels} <img src="Model_Beach1/Beach1_labbels.png" class="img-fluid"></p>
+<p>RGB Image of Beach Area 1 with Prelabeled Classification Data. This figure displays an RGB satellite image of Beach Area 1, overlaid with preclassified data points. The labels represent predefined classes used as training data for classification models. The image highlights the spatial distribution of the labeled points within the coastal environment, providing a visual context for subsequent model evaluation and analysis :::</p>
+<p>This visualization in <span class="quarto-unresolved-ref">?fig-Cart</span> Beach1 presents the predictions for Beach 1 using the pre-trained model. In the upper section of the visualization, the <em>Building</em> and <em>Forest</em> classes are represented, while the lower section shows the classification results for <em>Sand</em> and <em>Water</em>. <em>Sand</em> and <em>Water</em> were reclassified for clarity, with Sand assigned a value of 1 and <em>Water</em> reclassified accordingly. The <em>Sand</em> class is generally well-predicted, with distinct regions along the coast accurately classified as <em>Sand</em>. These areas align with expected locations, showing high confidence in the model’s predictions. However, some regions where <em>Sand</em> was anticipated are not represented in the graph, indicating areas where the model’s performance could be improved. The <em>Water</em> class is also well-predicted, with clear and well-defined boundaries distinguishing water bodies from other land cover types. Most areas identified as <em>Water</em> were classified with high confidence, including the river visible in the image, which was delineated effectively.</p>
+<p>:::{#fig-Cart Beach1} <img src="CART_Model/CART on Beach1: Predictions.png" class="img-fluid"></p>
+<p>CART model predictions for Beach Area 1. This figure illustrates the classification results of the CART model for Beach Area 1. The maps display the predicted spatial distribution of the four classes: Building, Forest, Sand, and Water. The lower-left panel represents Sand with a value of 1 for areas classified as Sand, while the lower-right panel represents Water with a value of 1 for areas classified as water. :::</p>
+<p>:::{#fig-Cart Confusionmatrix BEach 1} <img src="CART_Model/CART on Beach1: Confusionmatrix Beach1.png" class="img-fluid"></p>
+<p>Confusion Matrix for CART model Predictions on Beach 1. While the model achieved high accuracy in predicting the Water class (sensitivity = 1.0000, specificity = 0.9353), it exhibited poor performance for the Sand class (sensitivity = 0.6592). Misclassifications are evident, with a significant number of Forest pixels being misclassified as Building. The overall accuracy of the model is 62.27%, :::</p>
+<p>To evaluate the accuracy of the CART model on Beach Area 1, a confusion matrix was generated, illustrated in <span class="quarto-unresolved-ref">?fig-Cart</span> Confusionmatrix BEach 1. The overall performance of the model is limited, with an accuracy of 0.6227, indicating moderate classification capabilities.</p>
+<p>The model struggles particularly with predicting the <em>Sand</em> class, which is the most critical class in this analysis. With a sensitivity of 0.6592, the model correctly classifies approximately 66% of the <em>Sand pixels</em>. This highlights the need for improvement in detecting <em>Sand</em> more effectively.</p>
+</section>
+<section id="evaluation-random-forest-model" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="evaluation-random-forest-model"><span class="header-section-number">4.2</span> Evaluation Random Forest model</h2>
+<p>The Random Forest model, compared to the CART model, utilizes information from all available bands but prioritizes specific bands for classification, demonstrated in <span class="quarto-unresolved-ref">?fig-rf</span> bands. The feature importance analysis highlights which bands contribute the most to the model’s decision-making process. The Mean Decrease Gini metric is used to measure the importance of each band, indicating its role in reducing impurity in the decision trees.</p>
+<p>:::{#fig-rf bands} <img src="Random_Forest_Model/Random Forest Prediction on Training Data: Bands used.png" class="img-fluid"></p>
+<p>Feature importance of spectral bands in the Random Forest model. The Mean Decrease Gini metric indicates the contribution of each band to reducing impurity in the decision trees. Bands 07, 05, 06, and 04 are the most influential :::</p>
+<p>The Random Forest model was applied to the training dataset to classify land cover types, with a focus on the <em>Sand</em> class, in <a href="#fig-rf_training_classes" class="quarto-xref">Figure&nbsp;<span>4.6 (a)</span></a>, shows the predicted classes, with <em>Sand</em> clearly distinguished along the coastal regions. However, some misclassifications between <em>Buildings</em> and <em>Sand</em> are visible, particularly in areas near the coastline. This is further illustrated in Figure <a href="#fig:rf_training_sand" data-reference-type="ref" data-reference="fig:rf_training_sand">28</a>, which isolates the <em>Sand</em> class, highlighting the areas identified as <em>Sand</em> by the model. These results demonstrate the model’s ability to classify <em>Sand</em> accurately within the training dataset while noting some limitations in distinguishing between <em>Buildings</em> and <em>Sand</em>.</p>
+<div id="fig-rf_comparison_training" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rf_comparison_training-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-rf_training_classes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_training_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random Forest Prediction on Training Data: Classes.png" class="img-fluid figure-img" data-ref-parent="fig-rf_comparison_training">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_training_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) RF Trainingsdata: Classes
+</figcaption>
+</figure>
+</div>
+<div id="fig-rf_training_sand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_training_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random Forest Prediction on Training Data: Sand only.png" class="img-fluid figure-img" data-ref-parent="fig-rf_comparison_training">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_training_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) RF Trainingsdata: Sand Only
+</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rf_comparison_training-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Visualization of Random Forest model predictions on the training dataset. (a) The prediction map showing all classes (Building, Forest, Sand, and Water) as predicted by the Random Forest model. The Sand class is distinctly visible along the coastal region. (b) Reclassified prediction map showing only the Sand class, where Sand is assigned a value of 1 and all other classes are set to 0. This highlights the areas identified as Sand by the model, demonstrating its ability to differentiate Sand from other land cover types.
+</figcaption>
+</figure>
+</div>
+<p>The confusion matrix highlights the performance of the Random Forest model trained and tested on the same labeled dataset. As expected, the model achieved a low out-of-bag (OOB) error rate of 5.88%, reflecting the consistency between the training data and predictions due to the reuse of the same image.</p>
+<p>Focusing on the <em>Sand</em> class, which is the primary interest of this analysis, the model performed exceptionally well. It correctly classified 32 <em>Sand pixels</em> with only 1 misclassification, resulting in a class error rate of 3.03%. This demonstrates the model’s strong capability in identifying <em>Sand</em> as a distinct class, validating its suitability for this specific task.</p>
+<div id="fig-rf_traing" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rf_traing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random Forest Training Data Matrix.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rf_traing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: Confusion matrix for the Random Forest model trained on the labeled dataset. The model uses 500 trees and considers 3 variables at each split. The overall out-of-bag (OOB) error rate is 5.88%, indicating strong classification performance. The class error rates are lowest for Sand (3.0%) and Water (4.0%), while Building (11.1%) has the highest misclassification rate.
+</figcaption>
+</figure>
+</div>
+<p>The Random Forest model, trained on labeled data, was applied to two distinct areas, Beach1 and Beach2, illustrated in <a href="#fig-rf_beach_predictions_combined" class="quarto-xref">Figure&nbsp;<span>4.4</span></a>. These areas exhibit significantly different results in terms of classification accuracy and differentiation. Beach1 is compared to Beach2 a larger area.</p>
+<div id="fig-rf_beach_predictions_combined" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rf_beach_predictions_combined-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-rf_beach1_classes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_beach1_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random Forest Beach1: Predicted Classes.png" class="img-fluid figure-img" data-ref-parent="fig-rf_beach_predictions_combined">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_beach1_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Random Forest Model Beach1: Predicted Classes.
+</figcaption>
+</figure>
+</div>
+<div id="fig-rf_beach2_classes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_beach2_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random Forest Beach2: predicted Classes.png" class="img-fluid figure-img" data-ref-parent="fig-rf_beach_predictions_combined">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_beach2_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Random Forest Model Beach2: Predicted Classes.
+</figcaption>
+</figure>
+</div>
+<div id="fig-rf_beach1_sand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_beach1_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random Forest Beach1 Sand Pixel Only.png" class="img-fluid figure-img" data-ref-parent="fig-rf_beach_predictions_combined">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_beach1_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Random Forest Model Beach1: Sand Only.
+</figcaption>
+</figure>
+</div>
+<div id="fig-rf_beach2_sand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_beach2_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random Forest Beach2: Sand Pixels only.png" class="img-fluid figure-img" data-ref-parent="fig-rf_beach_predictions_combined">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_beach2_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Random Forest Model Beach2: Sand Only.
+</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rf_beach_predictions_combined-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: Random Forest model predictions for Beach1 and Beach2. (a) Predicted classes for Beach1, which covers a larger area compared to Beach2. (b) Predicted classes for Beach2, showing a smaller area but maintaining well-defined Sand regions and clear class boundaries. (c) Sand-only reclassification for Beach1, emphasizing the specific regions identified as Sand across the larger area. (d) Sand-only reclassification for Beach2, focusing on the smaller coastal region, demonstrating Sand predictions along the coastline.
+</figcaption>
+</figure>
+</div>
+<p>For Beach1, as shown in <a href="#fig-rf_conf1" class="quarto-xref">Figure&nbsp;<span>4.5 (a)</span></a>, the model achieved an overall accuracy of 75.62%, with a sensitivity of 62.78% for the <em>Sand</em> class. This means that approximately 63% of the actual <em>Sand pixels</em> were correctly identified, while 37.22% were misclassified. While the model demonstrates a moderate ability to detect <em>Sand</em>, there is clear room for improvement in sensitivity. On the other hand, the specificity for <em>Sand</em> is remarkably high at 98.70%, indicating that the model accurately classified 98.70% of <em>No-Sand pixels</em> as not <em>Sand</em>, effectively minimizing false positives. Additionally, the positive predictive value (PPV) for <em>Sand</em> is strong at 96.55%, meaning that when the model predicts <em>Sand</em>, it is correct 96.55% of the time. The balanced accuracy, which combines sensitivity and specificity, is 80.74%, reflecting an overall well-balanced performance for this class.</p>
+<p>In contrast, Beach2, as shown in <a href="#fig-rf_tconf2" class="quarto-xref">Figure&nbsp;<span>4.5 (b)</span></a>, which is smaller and less diverse than Beach1, yielded significantly better results, with an overall accuracy of 91.27%. The <em>Sand</em> class achieved an impressive sensitivity of 93.33%, successfully identifying the vast majority of <em>Sand</em> pixels. This high sensitivity, coupled with a specificity of 97.00% and a PPV of 92.11%, demonstrates the model’s robust performance in distinguishing <em>Sand</em> in this area. The improved results for Beach2 can likely be attributed to its clearer class boundaries and reduced landscape complexity, which make classification easier and more accurate.</p>
+<div id="fig-rf_comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rf_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-rf_conf1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_conf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random ForestBeach1 Confusionmatrix.png" class="img-fluid figure-img" data-ref-parent="fig-rf_comparison">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_conf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) RF Beach1: Confusion Matrix
+</figcaption>
+</figure>
+</div>
+<div id="fig-rf_tconf2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_tconf2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Random_Forest_Model/Random ForestBeach2 Confusionmatrix.png" class="img-fluid figure-img" data-ref-parent="fig-rf_comparison">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_tconf2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) RF Beach2: Confusion Matrix
+</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rf_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.5: Confusion matrices for Random Forest predictions on Beach1 and Beach2. (a) The confusion matrix for Beach1 shows moderate overall performance with an accuracy of 75.62%. The Sand class is identified with a sensitivity of 62.78% but struggles with some misclassifications. (b) The confusion matrix for Beach2 shows a much higher overall performance with an accuracy of 91.27%. The Sand class achieves excellent results, with a sensitivity of 93.33%, demonstrating the model’s effectiveness in identifying Sand in this area.
+</figcaption>
+</figure>
+</div>
+<p>It is also important to note the impact of dataset imbalance. The training data had fewer labeled points for the Building class compared to other classes, such as <em>Sand</em> and <em>Water</em>. This imbalance may have influenced the model’s ability to generalize effectively, particularly for <em>Buildings</em>, as seen in its lower sensitivity for this class.</p>
+<p>In conclusion, the Random Forest model demonstrates strong performance in identifying <em>Sand</em>, with high specificity and PPV for both areas. However, the sensitivity for <em>Sand</em> in Beach1 highlights the need for further improvement to ensure more <em>Sand</em> pixels are correctly detected. Addressing dataset imbalances, especially for underrepresented classes like <em>Buildings</em>, could further enhance the model’s performance.</p>
+</section>
+<section id="evaluation-support-vector-machine" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="evaluation-support-vector-machine"><span class="header-section-number">4.3</span> Evaluation Support Vector Machine</h2>
+<p>The SVM model utilized multiple spectral bands to classify <em>Sand</em> and other land cover types, as illustrated in <span class="quarto-unresolved-ref">?fig-svm</span> importance. An analysis of feature importance revealed that Bands B07, B12, and B02 played the most significant roles in the classification process. These bands contributed the highest to the model’s decision-making, suggesting that they contain the most relevant spectral information for distinguishing <em>Sand</em> from other classes. The importance of Bands B06 and B03 also indicates their complementary role in improving classification accuracy.</p>
+<p>This result aligns with the expectation that near-infrared and shortwave infrared bands, such as B07 and B12, are particularly effective for detecting <em>Sand</em> and vegetation boundaries. However, the results also highlight the limitations of Sentinel-2 data, as these critical bands are only available at a 20 meter resolution, restricting the model’s potential for finer scale classifications.</p>
+<p>:::{#fig-svm importance} <img src="Support Vector Machine/importance SVM.png" class="img-fluid"></p>
+<p>Feature importance of spectral bands used in the Support Vector Machine model. Bands B07, B12, and B02 are identified as the most influential in the classification process, highlighting their significance in distinguishing sand and other land cover types :::</p>
+<p>The Support Vector Machine model was evaluated on Beach1 and Beach2 to analyze its performance, visualized in <a href="#fig-rf_comparisonb" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>. The results reveal considerable differences in the model’s performance between the two areas, which was also mentioned in the CART and Random Forest model.</p>
+<p>On Beach1, the model struggles with detecting <em>Sand</em>, achieving a sensitivity of 57.40%. This indicates that a significant portion of actual <em>Sandpixels</em> is misclassified into other categories. Despite this, the positive predictive value (PPV) for <em>Sand</em> is exceptionally high at 96.97%, meaning that when the model predicts <em>Sand</em>, it is accurate nearly all the time. The specificity for <em>Sand</em> is also high with 98.60%, showing that <em>No-Sand pixels</em> are rarely misclassified as <em>Sand</em>. However, the overall balanced accuracy for the <em>Sand</em> class is 78.18%, highlighting the need for improved detection in larger, more diverse areas like Beach1.</p>
+<p>In contrast, Beach2 demonstrates significantly better results for the <em>Sand</em> class. The sensitivity improves to 80.00%, meaning the majority of <em>Sand pixels</em> are correctly identified. The PPV remains high at 92.31%, and the balanced accuracy rises to 88.75%. These results suggest that the SVM model performs better in the smaller, less complex area of Beach2, where class boundaries are more distinct and the landscape diversity is reduced.</p>
+<div id="fig-rf_comparisonb" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rf_comparisonb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-rf_training_classes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_training_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Support Vector Machine/SVM Beach1 Condusionmatrx.png" class="img-fluid figure-img" data-ref-parent="fig-rf_comparisonb">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_training_classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) SVM Beach1: Confusion Matrix
+</figcaption>
+</figure>
+</div>
+<div id="fig-rf_training_sand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rf_training_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Support Vector Machine/Support Vector Machine Beach2.png" class="img-fluid figure-img" data-ref-parent="fig-rf_comparisonb">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rf_training_sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) SVM Beach2: Confusion Matrix
+</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rf_comparisonb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: Confusion matrices for SVM model predictions on Beach1 and Beach2. (a) The SVM model applied to Beach1 achieves an overall accuracy of 80.56%, but the Sand class shows relatively low sensitivity at 57.40%, indicating that a significant portion of Sand pixels were misclassified. Despite this, the specificity is high at 98.96%, meaning non-Sand pixels are rarely misclassified as Sand. (b) The SVM model applied to Beach2 performs better overall, with an accuracy of 89.45%. The Sand class demonstrates improved sensitivity at 80.00% and a similarly high specificity of 97.50%. These results highlight the better differentiation of Sand in Beach2 compared to Beach1
+</figcaption>
+</figure>
+</div>
+<p>Overall, the Support Vector Machine demonstrates strong performance in detecting <em>Sand</em>. However, there is room for improvement in distinguishing <em>Sand</em> more effectively from the <em>Building</em> and <em>Water</em> classes, which could potentially be achieved by incorporating more training data for these two classes.</p>
+</section>
+<section id="unawatuna-beach-sand-changes-over-time-20192023" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="unawatuna-beach-sand-changes-over-time-20192023"><span class="header-section-number">4.4</span> Unawatuna Beach sand changes over time (2019–2023)</h2>
+<p>The evaluation of the Random Forest model reveals that it performs well on data that closely resembles the training dataset. This is evident in its ability to accurately predict <em>Sand</em> along the coastline, particularly in areas with features and shapes similar to those in the training data. This suggests that the model is reliable for analyzing timeline changes, as the consistent features of Unawatuna Beach over the years align well with the training data characteristics.</p>
+<p>The sand area calculations were derived using Sentinel-2 data with a 20m resolution, where each pixel represents a 20m x 20m area. In the visualized results, shown in <a href="#fig-all_models_comparison" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>, the model not only detects the sand coastline but also identifies sandy patches within urban and vegetative regions, which is a common feature in Sri Lankan coastal landscapes.</p>
+<p>:::{#fig-Sand Area Time} <img src="Timeline/Sand Area Time.png" class="img-fluid"></p>
+<p>Fluctuation of Sand Area Over the Years (2019–2023). The line plot illustrates the yearly changes in sand area, highlighting periods of decline and recovery. The trend indicates a gradual reduction in sand area on the beach of Unawatuna over the observed period. :::</p>
+<div id="fig-all_models_comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-all_models_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-Sand_2019" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Sand_2019-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Timeline/Sand_2019.png" class="img-fluid figure-img" data-ref-parent="fig-all_models_comparison">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Sand_2019-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Sand Pixel Count for the Year 2019
+</figcaption>
+</figure>
+</div>
+<div id="fig-Sand_2020" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Sand_2020-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Timeline/Sand_2020.png" class="img-fluid figure-img" data-ref-parent="fig-all_models_comparison">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Sand_2020-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Sand Pixel Count for the Year 2020
+</figcaption>
+</figure>
+</div>
+<div id="fig-Sand_2021" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Sand_2021-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Timeline/Sand_2021.png" class="img-fluid figure-img" data-ref-parent="fig-all_models_comparison">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Sand_2021-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Sand Pixel Count for the Year 2021
+</figcaption>
+</figure>
+</div>
+<div id="fig-Sand_2022" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Sand_2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Timeline/Sand_2022.png" class="img-fluid figure-img" data-ref-parent="fig-all_models_comparison">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Sand_2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Sand Pixel Count for the Year 2022
+</figcaption>
+</figure>
+</div>
+<div id="fig-Sand_2023" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Sand_2023-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Timeline/Sand_2023.png" class="img-fluid figure-img" data-ref-parent="fig-all_models_comparison">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Sand_2023-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(e) Sand Pixel Count for the Year 2023
+</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-all_models_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.7: Spatial distribution of sand pixels detected by the Random Forest model for the years 2019 to 2023. Subfigure (a) shows the sand pixel distribution for 2019, with sand primarily concentrated along the shoreline and some sand pixels detected inland, among forest and building areas. Subfigure (b) for 2020 and subfigure (c) for 2021 display variations in sand coverage, with differences in both shoreline and inland regions. Subfigure (d) for 2022 and subfigure (e) for 2023 illustrate further changes, with sand pixels detected across similar shoreline areas and sporadically inland. Fluctuations in sand coverage are visible across the subfigures, indicating differences in spatial distribution between the years.
+</figcaption>
+</figure>
+</div>
+<p>The analysis reveals a clear trend of decreasing sand levels between the years 2020 and 2021, as depicted in <span class="quarto-unresolved-ref">?fig-Sand</span> Area Time, indicating a period of reduction in sand coverage along the shoreline. In contrast, the years 2022 and 2023 show a slight recovery, with an increase in sand levels compared to the preceding period. This fluctuation highlights the dynamic nature of sand distribution over time, with periods of both decline and recovery evident in the observed data. The Table |<a href="#fig:tab2" data-reference-type="ref" data-reference="fig:tab2">2</a> shows the structed results of the pixel count.</p>
+<div id="fig:tab2">
+<table class="caption-top table">
+<caption>Sandpixel count in total, over the Area of Unawatuna.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Year</strong></th>
+<th style="text-align: left;"><strong>Sand Area</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">97600</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">97200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021</td>
+<td style="text-align: left;">81600</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">81200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023</td>
+<td style="text-align: left;">88400</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="discussion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Discussion</h1>
+<section id="evaluating-satellite-data-and-open-source-tools-for-monitoring-coastal-shoreline-fluctuations" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="evaluating-satellite-data-and-open-source-tools-for-monitoring-coastal-shoreline-fluctuations"><span class="header-section-number">5.1</span> Evaluating satellite data and open-source tools for monitoring coastal shoreline fluctuations</h2>
+<p>Understanding which publicly available satellite data is suitable for observing coastal shoreline fluctuations is central to improving monitoring methods. While Sentinel-2 data proved effective in this project, other options like PlanetScope and RapidEye offer complementary advantages. PlanetScope provides higher resolution (3m) and daily revisit capability, making it well-suited for detecting finer sand features and dynamic changes <span class="citation" data-cites="planet_planetscope_2024">(<a href="#ref-planet_planetscope_2024" role="doc-biblioref">Planet 2024a</a>)</span>. RapidEye, despite being discontinued in 2020, offers an extensive archive of high-resolution imagery (5m) across five spectral bands, enabling valuable historical analysis <span class="citation" data-cites="planet_rapideye_2024">(<a href="#ref-planet_rapideye_2024" role="doc-biblioref">Planet 2024b</a>)</span>. Utilizing these datasets could enhance the precision and temporal depth of monitoring sand dune fluctuations.</p>
+<p>To address the question of which free and open-source software tools are best suited for analyzing satellite data to monitor sand dune fluctuations along the Sri Lankan coastline, this project utilized R and QGIS. QGIS was used for labeling the Unawatuna beach data. Its intuitive interface and extensive plug-in Satellite ESRI made the labeling efficient <span class="citation" data-cites="gisgeography_sentinel_2019">(<a href="#ref-gisgeography_sentinel_2019" role="doc-biblioref">GISGeography 2019</a>)</span>.</p>
+<p>R served as the primary tool for data analysis and model implementation. Using packages such as terra for raster processing and caret for machine learning, R effectively handled large datasets and performed classification tasks like Random Forest and SVM. These tools enabled the integration of geospatial and statistical workflows, making R particularly effective for remote sensing and predictive modeling tasks. While R and QGIS were effective for this analysis, additional tools, particularly Python, could enhance the workflow. Python offers advanced segmentation models, such as UNet or SAM (Segment Anything Model), which are optimized for high-resolution image segmentation. These models, when applied to sand dune monitoring, could improve the granularity of classifications and better delineate areas like sandbanks and shoreline features. Python’s flexibility in integrating machine learning with geospatial libraries, such as rasterio and geopandas, complements the capabilities of R, especially for tasks requiring automated object detection and segmentation <span class="citation" data-cites="chege_comparing_2024">(<a href="#ref-chege_comparing_2024" role="doc-biblioref">Chege 2024</a>)</span>. In summary, R and QGIS proved effective for the tasks in this project, particularly for their accessibility and geospatial analytical capabilities. However, incorporating Python’s advanced segmentation models could further enhance the precision and depth of sand dune monitoring efforts.</p>
+</section>
+<section id="interpretation-of-performance" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="interpretation-of-performance"><span class="header-section-number">5.2</span> Interpretation of performance</h2>
+<p>The methodology for reliably monitoring and quantifying coastal shoreline fluctuations relies on the integration of satellite imagery, geospatial annotation, and machine learning models, with a focus on accurate labeling and Random Forest classification. Sentinel-2 satellite data, offering multi-year archives with 20-meter resolution and critical spectral bands (B07, B05, and B06), provides a cost-effective foundation for this project. The Random Forest model proved to be the most reliable tool, leveraging its ability to handle multiple spectral bands effectively and achieving high accuracy, particularly in classifying <em>Sand</em> with high specificity and predictive power.</p>
+<p>The labeling process, carried out using QGIS and supplemented by high-resolution ESRI imagery for precise annotation, was a good way to generate the training dataset. This dataset enabled the Random Forest model to outperform CART and SVM models, with accuracy levels of 75.62% for Beach1 and 91.27% for Beach2. Random Forest demonstrated superior sensitivity for <em>Sand</em> classification, especially in simpler landscapes like Beach2, where it reached 93.33%. In contrast, CART and SVM models showed potential but struggled with misclassifications due to limitations in training data and the moderate resolution of Sentinel-2.</p>
+<p>A significant limitation across all models was the imbalance in the labeled dataset, particularly for underrepresented classes like <em>Building</em>. This imbalance reduced generalization capabilities, resulting in misclassifications, especially in areas where <em>Sand</em> overlapped with other classes. Higher-resolution datasets, such as PlanetScope (3m resolution) or RapidEye (5m resolution), could complement Sentinel-2 data, enabling finer detection of features like narrow <em>Sand</em> banks and small-scale shoreline changes. The Random Forest model demonstrated the capability to detect coastal shoreline changes in Unawatuna, effectively identifying <em>Sand</em> fluctuations between 2019 and 2023. However, the model requires better training with a more balanced and comprehensive dataset to achieve more precise and reliable results. Additionally, it is possible that with improved training data, another machine learning model, such as SVM or a more advanced method, could outperform Random Forest in terms of accuracy and classification performance for detecting <em>Sand</em> and other coastal features.</p>
+</section>
+<section id="evaluation-of-methodology-and-potential-for-improvement" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="evaluation-of-methodology-and-potential-for-improvement"><span class="header-section-number">5.3</span> Evaluation of Methodology and potential for Improvement</h2>
+<p>One of the critical limitations observed is the imbalance in the training dataset, particularly for the <em>Building</em> class. The lack of sufficient labeled data for <em>Buildings</em> has led to misclassification, as the model struggles to learn the unique attributes of this class. Increasing the number of labeled data points for <em>Buildings</em> would likely improve the model’s ability to distinguish between <em>Sand</em> and <em>Building</em> pixels, especially in areas where urban regions border sandy zones. This could be achieved by expanding the labeling process or selecting areas with a higher representation of <em>Building</em> pixels for training. The selected area of interest likely plays an important role in the model’s performance. Beach Area 1, being larger and more diverse, may provide a broader range of features for the model to learn from, potentially contributing to better classification accuracy. In contrast, smaller and simpler beaches, like the one chosen for training in this project, might not offer enough variation or complexity for the model to generalize effectively, potentially leading to reduced performance. While this choice allowed for a more straightforward and controlled training process, future efforts could explore whether using larger, more varied AOIs for training improves the model’s robustness and its ability to classify diverse coastal regions more accurately. The current analysis relies on Sentinel-2 data with a spatial resolution of 20 meters. While this resolution is suitable for broader classifications, it struggles to capture finer features such as thin sandbanks or narrow coastal regions. Incorporating higher-resolution data, such as Rapideye from Planet, could significantly enhance the model’s ability to classify these smaller coastal features with greater precision. Additionally, Rapideye data offers historical imagery up to 2020, providing the opportunity for temporal analysis and improving classification accuracy under varying conditions <span class="citation" data-cites="planet_rapideye_2024">(<a href="#ref-planet_rapideye_2024" role="doc-biblioref">Planet 2024b</a>)</span>.</p>
+<p>It is also important to consider the role of spectral bands in the Random Forest model. Bands 07, 05, 06, and 04 have been identified as the most influential for classification in this project. However, these bands are only available at a 20-meter resolution in Sentinel-2 data, not at the higher 10-meter resolution. This limitation means that even with higher-resolution data, the model’s performance could still be constrained by the availability of critical spectral information <span class="citation" data-cites="gisgeography_sentinel_2019">(<a href="#ref-gisgeography_sentinel_2019" role="doc-biblioref">GISGeography 2019</a>)</span>. Overall, the accuracy of the predictions largely depends on how similar the beach is to the original training data. While the model demonstrates potential for accurate <em>Sand</em> classification, further adjustments and additional labeling are necessary to improve its generalization and reliability. Nonetheless, this marks a significant milestone in achieving the goal of predicting <em>Sand</em> presence with the current methodology.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-eos_data_analytic_panchromatic_2021" class="csl-entry" role="listitem">
+Analytic, EOS Data. 2021. <span>“Panchromatic <span>Imagery</span> <span>And</span> <span>Its</span> <span>Band</span> <span>Combinations</span> <span>In</span> <span>Use</span>.”</span> <a href="https://eos.com/make-an-analysis/panchromatic/">https://eos.com/make-an-analysis/panchromatic/</a>.
+</div>
+<div id="ref-arcgis_grundlagen_nodate" class="csl-entry" role="listitem">
+ArcGIS. n.d. <span>“Grundlagen Zu <span>Pan</span>-<span>Sharpening</span>—<span>Hilfe</span> <span></span> <span>ArcGIS</span> for <span>Desktop</span>.”</span> Accessed December 11, 2024. <a href="https://desktop.arcgis.com/de/arcmap/10.3/manage-data/raster-and-images/fundamentals-of-panchromatic-sharpening.htm">https://desktop.arcgis.com/de/arcmap/10.3/manage-data/raster-and-images/fundamentals-of-panchromatic-sharpening.htm</a>.
+</div>
+<div id="ref-belgiu_random_2016" class="csl-entry" role="listitem">
+Belgiu, Mariana, and Lucian Drăguţ. 2016. <span>“Random Forest in Remote Sensing: <span>A</span> Review of Applications and Future Directions.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 114 (April): 24–31. <a href="https://doi.org/10.1016/j.isprsjprs.2016.01.011">https://doi.org/10.1016/j.isprsjprs.2016.01.011</a>.
+</div>
+<div id="ref-chege_comparing_2024" class="csl-entry" role="listitem">
+Chege, Stephen. 2024. <span>“Comparing <span>R</span> <span>VS</span> <span>Python</span> for <span>Geospatial</span> <span>Science</span>.”</span> <em>The Deep Hub</em>. <a href="https://medium.com/thedeephub/comparing-r-vs-python-for-geospatial-science-881787683c41">https://medium.com/thedeephub/comparing-r-vs-python-for-geospatial-science-881787683c41</a>.
+</div>
+<div id="ref-donges_random_2024" class="csl-entry" role="listitem">
+Donges, Niklas. 2024. <span>“Random <span>Forest</span>: <span>A</span> <span>Complete</span> <span>Guide</span> for <span>Machine</span> <span>Learning</span>.”</span> <em>Built In</em>. <a href="https://builtin.com/data-science/random-forest-algorithm">https://builtin.com/data-science/random-forest-algorithm</a>.
+</div>
+<div id="ref-esa_rapideye_nodate" class="csl-entry" role="listitem">
+ESA. n.d. <span>“<span>RapidEye</span> - <span>Earth</span> <span>Online</span>.”</span> Accessed December 2, 2024. <a href="https://earth.esa.int/eogateway/missions/rapideye#instruments-section">https://earth.esa.int/eogateway/missions/rapideye#instruments-section</a>.
+</div>
+<div id="ref-ghosh_remote_2023" class="csl-entry" role="listitem">
+Ghosh, Aniruddha, and Robert J Hijmans. 2023. <span>“Remote <span>Sensing</span> <span>Image</span> <span>Analysis</span> with <span>R</span>.”</span>
+</div>
+<div id="ref-gillian_qgis_nodate" class="csl-entry" role="listitem">
+Gillian, Palino. n.d. <span>“<span>QGIS</span>: <span>An</span> <span>Introduction</span> to an <span>Open</span>-<span>Source</span> <span>Geographic</span> <span>Information</span> <span>System</span> <span></span> <span>Mississippi</span> <span>State</span> <span>University</span> <span>Extension</span> <span>Service</span>.”</span> Accessed December 5, 2024. <a href="http://extension.msstate.edu/publications/qgis-introduction-open-source-geographic-information-system">http://extension.msstate.edu/publications/qgis-introduction-open-source-geographic-information-system</a>.
+</div>
+<div id="ref-gisgeography_sentinel_2019" class="csl-entry" role="listitem">
+GISGeography. 2019. <span>“Sentinel 2 <span>Bands</span> and <span>Combinations</span>.”</span> <em>GIS Geography</em>. <a href="https://gisgeography.com/sentinel-2-bands-combinations/">https://gisgeography.com/sentinel-2-bands-combinations/</a>.
+</div>
+<div id="ref-map-site_qgis_nodate" class="csl-entry" role="listitem">
+Map-site. n.d. <span>“<span>QGIS</span> <span>Advanced</span> [<span>Lernplattform</span> Für <span>OpenSource</span> <span>GIS</span>].”</span> Accessed December 5, 2024. <a href="https://lernplattform.map-site.de/doku.php/qgis/advanced/start">https://lernplattform.map-site.de/doku.php/qgis/advanced/start</a>.
+</div>
+<div id="ref-mcauliffe_panchromatic_2021" class="csl-entry" role="listitem">
+McAuliffe, Kellen. 2021. <span>“Panchromatic <span>Imaging</span>.”</span> <em>ArcGIS StoryMaps</em>. <a href="https://storymaps.arcgis.com/stories/28a2091d2819476c8c8fac573798e912">https://storymaps.arcgis.com/stories/28a2091d2819476c8c8fac573798e912</a>.
+</div>
+<div id="ref-mountrakis_support_2011" class="csl-entry" role="listitem">
+Mountrakis, Giorgos, Jungho Im, and Caesar Ogole. 2011. <span>“Support Vector Machines in Remote Sensing: <span>A</span> Review.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 66 (3): 247–59. <a href="https://doi.org/10.1016/j.isprsjprs.2010.11.001">https://doi.org/10.1016/j.isprsjprs.2010.11.001</a>.
+</div>
+<div id="ref-nasa_cassinis_nodate" class="csl-entry" role="listitem">
+NASA. n.d. <span>“Cassini’s <span>Radioisotope</span> <span>Thermoelectric</span> <span>Generators</span> (<span>RTGs</span>) - <span>NASA</span> <span>Science</span>.”</span> Accessed December 11, 2024. <a href="https://science.nasa.gov/mission/cassini/radioisotope-thermoelectric-generator/">https://science.nasa.gov/mission/cassini/radioisotope-thermoelectric-generator/</a>.
+</div>
+<div id="ref-planet_planetscope_2024" class="csl-entry" role="listitem">
+Planet. 2024a. <span>“<span>PlanetScope</span> Übersicht.”</span> <a href="https://developers.planet.com/docs/data/planetscope/">https://developers.planet.com/docs/data/planetscope/</a>.
+</div>
+<div id="ref-planet_rapideye_2024" class="csl-entry" role="listitem">
+———. 2024b. <span>“<span>RapidEye</span> <span>Overview</span>.”</span> <a href="https://developers.planet.com/docs/data/rapideye/">https://developers.planet.com/docs/data/rapideye/</a>.
+</div>
+<div id="ref-planet_planet_nodate" class="csl-entry" role="listitem">
+———. n.d. <span>“Planet <span>Science</span> <span>Programs</span>: <span>Satellite</span> <span>Imagery</span> <span>Access</span> for <span>Researchers</span> <span></span> <span>Planet</span>.”</span> Accessed December 10, 2024. <a href="https://www.planet.com/science/">https://www.planet.com/science/</a>.
+</div>
+<div id="ref-priyadharshini_r_2015" class="csl-entry" role="listitem">
+Priyadharshini. 2015. <span>“R Vs <span>Python</span> - <span>What</span> Should <span>I</span> Learn?”</span> <em>Battle of the Programming Languages: R Vs Python</em>. <a href="https://www.simplilearn.com/r-vs-python-battle-of-programming-languages-article">https://www.simplilearn.com/r-vs-python-battle-of-programming-languages-article</a>.
+</div>
+<div id="ref-publishers_american_2000" class="csl-entry" role="listitem">
+Publishers, HarperCollins. 2000. <span>“The <span>American</span> <span>Heritage</span> <span>Dictionary</span> Entry: <span>Coast</span>.”</span> <a href="https://ahdictionary.com/word/search.html?q=Coast">https://ahdictionary.com/word/search.html?q=Coast</a>.
+</div>
+<div id="ref-rathnayake_negative_2015" class="csl-entry" role="listitem">
+Rathnayake, Suvimali. 2015. <span>“Negative <span>Environmental</span> <span>Impacts</span> of <span>Tourism</span> in <span>Unawatuna</span> <span>Beach</span> <span>Area</span>,”</span> May.
+</div>
+<div id="ref-selvaraju_support_2021" class="csl-entry" role="listitem">
+Selvaraju, S., P. Leela Jancy, D. Vinod Kumar, R. Prabha, Karthikeyan C, and D. Vijendra Babu. 2021. <span>“Support <span>Vector</span> <span>Machine</span> Based <span>Remote</span> <span>Sensing</span> Using <span>Satellite</span> <span>Data</span> <span>Image</span>.”</span> In <em>2021 2nd <span>International</span> <span>Conference</span> on <span>Smart</span> <span>Electronics</span> and <span>Communication</span> (<span>ICOSEC</span>)</em>, 871–74. <a href="https://doi.org/10.1109/ICOSEC51865.2021.9591631">https://doi.org/10.1109/ICOSEC51865.2021.9591631</a>.
+</div>
+<div id="ref-setu_segment_2024" class="csl-entry" role="listitem">
+Setu, Jahanggir, Mahmudul Islam, Syed Pasha, Nabarun Halder, Ekram Hossain, Asif Mahmud, Ashraful Islam, Md Alam, and M. Amin. 2024. <em>Segment <span>Anything</span> <span>Model</span> (<span>SAM</span> 2) <span>Unveiled</span>: <span>Functionality</span>, <span>Applications</span>, and <span>Practical</span> <span>Implementation</span> <span>Across</span> <span>Multiple</span> <span>Domains</span></em>. <a href="https://doi.org/10.20944/preprints202408.1790.v1">https://doi.org/10.20944/preprints202408.1790.v1</a>.
+</div>
+<div id="ref-shanshan_panchromatic_2022" class="csl-entry" role="listitem">
+Shanshan. 2022. <span>“Panchromatic <span>Image</span> - an Overview <span></span> <span>ScienceDirect</span> <span>Topics</span>.”</span> <a href="https://www.sciencedirect.com/topics/computer-science/panchromatic-image">https://www.sciencedirect.com/topics/computer-science/panchromatic-image</a>.
+</div>
+<div id="ref-silveira_optimizing_2013" class="csl-entry" role="listitem">
+Silveira, Tanya, H. Sousa, Rui Taborda, Norbert Psuty, César Andrade, and Maria Freitas. 2013. <span>“Optimizing Beach Topographical Field Surveys: <span>Matching</span> the Effort with the Objectives.”</span> <em>Journal of Coastal Research</em> 65 (January): 588–93. <a href="https://doi.org/10.2112/SI65-100.1">https://doi.org/10.2112/SI65-100.1</a>.
+</div>
+<div id="ref-sinergise_solutions_copernicus_nodate" class="csl-entry" role="listitem">
+Sinergise Solutions. n.d. <span>“Copernicus <span>Data</span> <span>Space</span> <span>Ecosystem</span>.”</span> Accessed December 10, 2024. <a href="https://www.sentinel-hub.com/explore/copernicus-data-space-ecosystem/">https://www.sentinel-hub.com/explore/copernicus-data-space-ecosystem/</a>.
+</div>
+<div id="ref-wasana_impact_2018" class="csl-entry" role="listitem">
+Wasana. 2018. <span>“Impact of <span>Anthropogenic</span> <span>Activities</span> on <span>Coastal</span> <span>Landscape</span> <span>Changes</span> in <span>Unawatuna</span> <span>Coastal</span> <span>Zone</span>, <span>Sri</span> <span>Lanka</span>.”</span> <em>International Journal of Multidisciplinary Studies</em> 5 (2).
+</div>
+<div id="ref-wasser_how_2017" class="csl-entry" role="listitem">
+Wasser, Leah. 2017. <span>“How to <span>Open</span> and <span>Use</span> <span>Files</span> in <span>Geotiff</span> <span>Format</span>.”</span> <em>Earth Data Science - Earth Lab</em>. <a href="https://www.earthdatascience.org/courses/earth-analytics/lidar-raster-data-r/introduction-to-spatial-metadata-r/">https://www.earthdatascience.org/courses/earth-analytics/lidar-raster-data-r/introduction-to-spatial-metadata-r/</a>.
+</div>
+<div id="ref-weerasingha_coastal_2022" class="csl-entry" role="listitem">
+Weerasingha, W. A. D. B., and Amila Sandaruwan Ratnayake. 2022. <span>“Coastal Landform Changes on the East Coast of <span>Sri</span> <span>Lanka</span> Using Remote Sensing and Geographic Information System (<span>GIS</span>) Techniques.”</span> <em>Remote Sensing Applications: Society and Environment</em> 26 (April): 100763. <a href="https://doi.org/10.1016/j.rsase.2022.100763">https://doi.org/10.1016/j.rsase.2022.100763</a>.
+</div>
+<div id="ref-xiao_enhancing_2021" class="csl-entry" role="listitem">
+Xiao, Yanghao, Yucheng Liu, Yuanyuan Deng, and Haoxuan Li. 2021. <span>“Enhancing <span>Multi</span>-<span>Class</span> <span>Classification</span> in <span>One</span>-<span>Versus</span>-<span>One</span> <span>Strategy</span>: <span>A</span> <span>Type</span> of <span>Base</span> <span>Classifier</span> <span>Modification</span> and <span>Weighted</span> <span>Voting</span> <span>Mechanism</span>.”</span> In <em>2021 <span>International</span> <span>Conference</span> on <span>Communications</span>, <span>Information</span> <span>System</span> and <span>Computer</span> <span>Engineering</span> (<span>CISCE</span>)</em>, 303–7. <a href="https://doi.org/10.1109/CISCE52179.2021.9445948">https://doi.org/10.1109/CISCE52179.2021.9445948</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
