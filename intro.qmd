@@ -1,5 +1,13 @@
 # Introduction
 
-This is a book created from markdown and executable code.
+Coastal areas, where land meets the sea, are dynamic environments shaped by the continuous interaction of natural forces such as wind and waves [@publishers_american_2000]. These forces contribute to the erosion and construction of geographical features like beaches, dunes and lagoons, resulting in constantly changing coastal landscapes [@weerasingha_coastal_2022]. These transitional areas are characterized by high biodiversity and include fragile ecosystems like mangroves and coral reefs. However, they are also under significant pressure from urbanization and human activities, with more than half of the global population residing near coastlines. Coastal areas are among the most visited regions worldwide, with tourism being a major economic driver in many locations. These factors collectively contribute to the rapid transformation of coastal landscapes [@wasana_impact_2018].
 
-See @knuth84 for additional discussion of literate programming.
+Unawatuna, situated on the southwestern coastline of Sri Lanka, is an iconic beach known for its unique semicircular shape, ecological richness, and popularity among tourists. It has been recognized internationally as one of the most attractive beaches in the world, featuring activities such as snorkeling, diving, and whale watching, as well as hosting diverse ecosystems, including coral reefs and mangroves. These natural and cultural assets make Unawatuna a vital area for tourism and local livelihoods [@rathnayake_negative_2015]. However, the impacts of erosion, seasonal fluctuations, and human activities, especially those associated with tourism, have raised concerns about the long-term stability and preservation of Unawatuna Beach. Traditional monitoring methods, such as field surveys, are often resource-intensive and may not provide consistent or comprehensive data over time [@silveira_optimizing_2013]. Satellite imagery offers a promising alternative for addressing these challenges, enabling large-scale and cost-effective monitoring of beach changes. This project focuses on this questions:
+
+-   What methodology would be capable of reliably monitor and quantify sand dune fluctuations along the Sri Lankan coastline?
+
+-   What types of publicly available satellite data can be used to observe sand dune fluctuations?
+
+-   Which free and open-source software tools are best suited for analyzing satellite data to monitor sand dune fluctuations along the Sri Lankan coastline?
+
+-   How can the accuracy and reliability of the monitoring methods be evaluated?

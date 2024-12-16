@@ -2,11 +2,18 @@ project:
   type: book
 
 book:
-  title: "book"
-  author: "Norah Jones"
-  date: "12/16/2024"
+  title: "Monitoring of coastal changes using satellite imagery: A case study of Unawatuna"
+  subtitle: "Project Work 2"
+  author: "Meggie Krymowski"
+  submitted: "2024-12-12"
+  contributor: "Nils Ratnaweera"
   chapters:
     - index.qmd
+    - theoretical-framework.qmd
+    - methodology.qmd
+    - results.qmd
+    - discussion.qmd
+    - references.qmd
 
 
 bibliography: references.bib
