@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Meggie Krymowski">
 
-<title>Monitoring of coastal changes using satellite imagery: A case study of Unawatuna</title>
+<title>1&nbsp; Introduction – Monitoring of coastal changes using satellite imagery: A case study of Unawatuna</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./theoretical-framework.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Abstract</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,13 +131,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abstract</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -156,26 +176,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Monitoring of coastal changes using satellite imagery: A case study of Unawatuna</h1>
-<p class="subtitle lead">Project Work 2</p>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Meggie Krymowski </p>
-          </div>
-  </div>
     
   
     
@@ -186,13 +201,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="abstract" class="level1 unnumbered unlisted">
-<h1 class="unnumbered unlisted">Abstract</h1>
-<p>Coastal environments are dynamic landscapes shaped by natural forces and human activities, necessitating effective monitoring to support sustainable management. This project focuses on developing a methodology to monitor sand fluctuations along the coastline of Unawatuna, Sri Lanka, from 2019 to 2023, using satellite imagery and machine learning. Sentinel-2 data, with its multi-spectral features and 20m spatial resolution, served as the foundation for classifying land cover types such as <em>Sand, Water, Forest, and Buildings</em>. The dataset was manually annotated, enhanced by high-resolution references, and used to train machine learning models. While the project highlights the utility of open-source tools like QGIS and R for integrating geospatial analysis with machine learning, challenges such as data resolution limitations and the need for improved classification accuracy remain.</p>
-<p>Three models — Classification and Regression Tree (CART), Random Forest (RF), and Support Vector Machine (SVM) — were implemented and evaluated for their performance in detecting sand areas. The Random Forest model emerged as the most effective, achieving high accuracy in <em>Sand</em> classification and successfully identifying temporal changes in sand coverage. Results indicate a notable reduction in sand between 2020 and 2021, followed by partial recovery in subsequent years.</p>
+<p>Coastal areas, where land meets the sea, are dynamic environments shaped by the continuous interaction of natural forces such as wind and waves <span class="citation" data-cites="publishers_american_2000">(<a href="references.html#ref-publishers_american_2000" role="doc-biblioref">Publishers 2000</a>)</span>. These forces contribute to the erosion and construction of geographical features like beaches, dunes and lagoons, resulting in constantly changing coastal landscapes <span class="citation" data-cites="weerasingha_coastal_2022">(<a href="references.html#ref-weerasingha_coastal_2022" role="doc-biblioref">Weerasingha and Ratnayake 2022</a>)</span>. These transitional areas are characterized by high biodiversity and include fragile ecosystems like mangroves and coral reefs. However, they are also under significant pressure from urbanization and human activities, with more than half of the global population residing near coastlines. Coastal areas are among the most visited regions worldwide, with tourism being a major economic driver in many locations. These factors collectively contribute to the rapid transformation of coastal landscapes <span class="citation" data-cites="wasana_impact_2018">(<a href="references.html#ref-wasana_impact_2018" role="doc-biblioref">Wasana 2018</a>)</span>.</p>
+<p>Unawatuna, situated on the southwestern coastline of Sri Lanka, is an iconic beach known for its unique semicircular shape, ecological richness, and popularity among tourists. It has been recognized internationally as one of the most attractive beaches in the world, featuring activities such as snorkeling, diving, and whale watching, as well as hosting diverse ecosystems, including coral reefs and mangroves. These natural and cultural assets make Unawatuna a vital area for tourism and local livelihoods <span class="citation" data-cites="rathnayake_negative_2015">(<a href="references.html#ref-rathnayake_negative_2015" role="doc-biblioref">Rathnayake 2015</a>)</span>. However, the impacts of erosion, seasonal fluctuations, and human activities, especially those associated with tourism, have raised concerns about the long-term stability and preservation of Unawatuna Beach. Traditional monitoring methods, such as field surveys, are often resource-intensive and may not provide consistent or comprehensive data over time <span class="citation" data-cites="silveira_optimizing_2013">(<a href="references.html#ref-silveira_optimizing_2013" role="doc-biblioref">Silveira et al. 2013</a>)</span>. Satellite imagery offers a promising alternative for addressing these challenges, enabling large-scale and cost-effective monitoring of beach changes. This project focuses on this questions:</p>
+<ul>
+<li><p>What methodology would be capable of reliably monitor and quantify sand dune fluctuations along the Sri Lankan coastline?</p></li>
+<li><p>What types of publicly available satellite data can be used to observe sand dune fluctuations?</p></li>
+<li><p>Which free and open-source software tools are best suited for analyzing satellite data to monitor sand dune fluctuations along the Sri Lankan coastline?</p></li>
+<li><p>How can the accuracy and reliability of the monitoring methods be evaluated?</p></li>
+</ul>
 
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-publishers_american_2000" class="csl-entry" role="listitem">
+Publishers, HarperCollins. 2000. <span>“The <span>American</span> <span>Heritage</span> <span>Dictionary</span> Entry: <span>Coast</span>.”</span> <a href="https://ahdictionary.com/word/search.html?q=Coast">https://ahdictionary.com/word/search.html?q=Coast</a>.
+</div>
+<div id="ref-rathnayake_negative_2015" class="csl-entry" role="listitem">
+Rathnayake, Suvimali. 2015. <span>“Negative <span>Environmental</span> <span>Impacts</span> of <span>Tourism</span> in <span>Unawatuna</span> <span>Beach</span> <span>Area</span>,”</span> May.
+</div>
+<div id="ref-silveira_optimizing_2013" class="csl-entry" role="listitem">
+Silveira, Tanya, H. Sousa, Rui Taborda, Norbert Psuty, César Andrade, and Maria Freitas. 2013. <span>“Optimizing Beach Topographical Field Surveys: <span>Matching</span> the Effort with the Objectives.”</span> <em>Journal of Coastal Research</em> 65 (January): 588–93. <a href="https://doi.org/10.2112/SI65-100.1">https://doi.org/10.2112/SI65-100.1</a>.
+</div>
+<div id="ref-wasana_impact_2018" class="csl-entry" role="listitem">
+Wasana. 2018. <span>“Impact of <span>Anthropogenic</span> <span>Activities</span> on <span>Coastal</span> <span>Landscape</span> <span>Changes</span> in <span>Unawatuna</span> <span>Coastal</span> <span>Zone</span>, <span>Sri</span> <span>Lanka</span>.”</span> <em>International Journal of Multidisciplinary Studies</em> 5 (2).
+</div>
+<div id="ref-weerasingha_coastal_2022" class="csl-entry" role="listitem">
+Weerasingha, W. A. D. B., and Amila Sandaruwan Ratnayake. 2022. <span>“Coastal Landform Changes on the East Coast of <span>Sri</span> <span>Lanka</span> Using Remote Sensing and Geographic Information System (<span>GIS</span>) Techniques.”</span> <em>Remote Sensing Applications: Society and Environment</em> 26 (April): 100763. <a href="https://doi.org/10.1016/j.rsase.2022.100763">https://doi.org/10.1016/j.rsase.2022.100763</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -614,10 +649,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Abstract">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Abstract</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./theoretical-framework.html" class="pagination-link" aria-label="Theoretical Framework">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theoretical Framework</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
