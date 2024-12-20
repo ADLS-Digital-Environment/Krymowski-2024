@@ -12,11 +12,11 @@ To assess the performance of the CART model, it was trained on a labeled dataset
 CART Model training data classification accuracy. The figure illustrates the classification accuracy of the CART model for the training dataset, using the same imagery it was trained on.
 :::
 
-This demonstrates that the satellite data used in the project is capable of distinguishing between classes, even at a resolution of 20 meters. This confirms that the selected satellite data is suitable for further steps in the project. To quantify this, the confusion matrix generated from the CART model is analyzed, as illustrated in @fig-Cart accuracy. As anticipated, since the same image used for training was also used for evaluation, the accuracy is relatively high, with a value of 0.96%.
+This demonstrates that the satellite data used in the project is capable of distinguishing between classes, even at a resolution of 20 meters. This confirms that the selected satellite data is suitable for further steps in the project. To quantify this, the confusion matrix generated from the CART model is analyzed, as illustrated in @fig-Cart-accuracy. As anticipated, since the same image used for training was also used for evaluation, the accuracy is relatively high, with a value of 0.96%.
 
 The CART model performs particularly well in predicting *Sand*, correctly classifying 33 points. The *Building* class was misclassifying 4 times. However, the model shows limitations in distinguishing between *Building* and *Forest*.
 
-:::{#fig-Cart accuracy}
+:::{#fig-Cart-accuracy}
 ![](CART_Model/CART TRAIN_CONF.png)
 
 Confusion Matrix for CART Model Predictions on Training Data. This figure presents the confusion matrix and classification statistics for the CART model applied to the training dataset. The model achieved an overall accuracy of 96.64%, with particularly high performance for the Sand class, achieving perfect sensitivity (1.000) and specificity (0.9884), indicating its ability to classify sand pixels accurately. However, the model struggled slightly with the Building class, where some instances were misclassified as Forest or Sand, reflected in a sensitivity of 0.8519 for Building.
@@ -24,7 +24,7 @@ Confusion Matrix for CART Model Predictions on Training Data. This figure presen
 
 To understand why the CART model struggles to differentiate between *Building* and *Forest,* the decision tree was analyzed. It is also essential to identify which bands were utilized for the predictions to determine which ones provide the most valuable information. The CART model selected Bands 02, 05, 06, and 07 from the available set, indicating that these bands currently hold the most significant information for the given training dataset.
 
-:::{#fig-Cart Decisiontree}
+:::{#fig-Cart-Decisiontree}
 ![](CART_Model/CART on Training Data: Decision Tree.png.png)
 
 CART Decision Tree Model. The model uses thresholds from Sentinel-2 spectral bands B02, B05, B06, and B07 to make hierarchical decisions.
@@ -32,37 +32,37 @@ CART Decision Tree Model. The model uses thresholds from Sentinel-2 spectral ban
 
 The *Building* class is predicted in the leftmost leaf node. In this node, the model predicts *Building* with 100% confidence (1.00 in the matrix). However, this node only accounts for 19% of the total data, suggesting that the *Building* class is not well-represented across the training dataset. This limited representation might contribute to the model's difficulty in accurately distinguishing between *Building* and other classes, such as *Forest.*
 
-The performance of the trained CART model was evaluated on a different area within the same satellite image, separate from the region used for training. This visualization displays in @fig-Model labels the labeled data for Beach 1, showing the different classes overlaid on the RGB image. A substantial number of labels were created to evaluate the reliability and performance of the CART model.
+The performance of the trained CART model was evaluated on a different area within the same satellite image, separate from the region used for training. This visualization displays in @fig-Model-labels the labeled data for Beach 1, showing the different classes overlaid on the RGB image. A substantial number of labels were created to evaluate the reliability and performance of the CART model.
 
-:::{#fig-Model labels}
+:::{#fig-Model-labels}
 ![](Model_Beach1/Beach1_labbels.png)
 
 RGB Image of Beach Area 1 with Prelabeled Classification Data. This figure displays an RGB satellite image of Beach Area 1, overlaid with preclassified data points. The labels represent predefined classes used as training data for classification models. The image highlights the spatial distribution of the labeled points within the coastal environment, providing a visual context for subsequent model evaluation and analysis
 :::
 
-This visualization in @fig-Cart Beach1 presents the predictions for Beach 1 using the pre-trained model. In the upper section of the visualization, the *Building* and *Forest* classes are represented, while the lower section shows the classification results for *Sand* and *Water*. *Sand* and *Water* were reclassified for clarity, with Sand assigned a value of 1 and *Water* reclassified accordingly. The *Sand* class is generally well-predicted, with distinct regions along the coast accurately classified as *Sand*. These areas align with expected locations, showing high confidence in the model's predictions. However, some regions where *Sand* was anticipated are not represented in the graph, indicating areas where the model's performance could be improved. The *Water* class is also well-predicted, with clear and well-defined boundaries distinguishing water bodies from other land cover types. Most areas identified as *Water* were classified with high confidence, including the river visible in the image, which was delineated effectively.
+This visualization in @fig-Cart-Beach1 presents the predictions for Beach 1 using the pre-trained model. In the upper section of the visualization, the *Building* and *Forest* classes are represented, while the lower section shows the classification results for *Sand* and *Water*. *Sand* and *Water* were reclassified for clarity, with Sand assigned a value of 1 and *Water* reclassified accordingly. The *Sand* class is generally well-predicted, with distinct regions along the coast accurately classified as *Sand*. These areas align with expected locations, showing high confidence in the model's predictions. However, some regions where *Sand* was anticipated are not represented in the graph, indicating areas where the model's performance could be improved. The *Water* class is also well-predicted, with clear and well-defined boundaries distinguishing water bodies from other land cover types. Most areas identified as *Water* were classified with high confidence, including the river visible in the image, which was delineated effectively.
 
-:::{#fig-Cart Beach1}
+:::{#fig-Cart-Beach1}
 ![](CART_Model/CART on Beach1: Predictions.png)
 
 CART model predictions for Beach Area 1. This figure illustrates the classification results of the CART model for Beach Area 1. The maps display the predicted spatial distribution of the four classes: Building, Forest, Sand, and Water. The lower-left panel represents Sand with a value of 1 for areas classified as Sand, while the lower-right panel represents Water with a value of 1 for areas classified as water.
 :::
 
-:::{#fig-Cart Confusionmatrix BEach 1}
+:::{#fig-Cart-Confusionmatrix-BEach-1}
 ![](CART_Model/CART on Beach1: Confusionmatrix Beach1.png)
 
 Confusion Matrix for CART model Predictions on Beach 1. While the model achieved high accuracy in predicting the Water class (sensitivity = 1.0000, specificity = 0.9353), it exhibited poor performance for the Sand class (sensitivity = 0.6592). Misclassifications are evident, with a significant number of Forest pixels being misclassified as Building. The overall accuracy of the model is 62.27%,
 :::
 
-To evaluate the accuracy of the CART model on Beach Area 1, a confusion matrix was generated, illustrated in @fig-Cart Confusionmatrix BEach 1. The overall performance of the model is limited, with an accuracy of 0.6227, indicating moderate classification capabilities.
+To evaluate the accuracy of the CART model on Beach Area 1, a confusion matrix was generated, illustrated in fig-Cart-Confusionmatrix-BEach-1. The overall performance of the model is limited, with an accuracy of 0.6227, indicating moderate classification capabilities.
 
 The model struggles particularly with predicting the *Sand* class, which is the most critical class in this analysis. With a sensitivity of 0.6592, the model correctly classifies approximately 66% of the *Sand pixels*. This highlights the need for improvement in detecting *Sand* more effectively.
 
 ## Evaluation Random Forest model
 
-The Random Forest model, compared to the CART model, utilizes information from all available bands but prioritizes specific bands for classification, demonstrated in @fig-rf bands. The feature importance analysis highlights which bands contribute the most to the model's decision-making process. The Mean Decrease Gini metric is used to measure the importance of each band, indicating its role in reducing impurity in the decision trees.
+The Random Forest model, compared to the CART model, utilizes information from all available bands but prioritizes specific bands for classification, demonstrated in @fig-rf-bands. The feature importance analysis highlights which bands contribute the most to the model's decision-making process. The Mean Decrease Gini metric is used to measure the importance of each band, indicating its role in reducing impurity in the decision trees.
 
-:::{#fig-rf bands}
+:::{#fig-rf-bands}
 ![](Random_Forest_Model/Random Forest Prediction on Training Data: Bands used.png)
 
 Feature importance of spectral bands in the Random Forest model. The Mean Decrease Gini metric indicates the contribution of each band to reducing impurity in the decision trees. Bands 07, 05, 06, and 04 are the most influential
@@ -144,11 +144,11 @@ In conclusion, the Random Forest model demonstrates strong performance in identi
 
 ## Evaluation Support Vector Machine
 
-The SVM model utilized multiple spectral bands to classify *Sand* and other land cover types, as illustrated in @fig-svm importance. An analysis of feature importance revealed that Bands B07, B12, and B02 played the most significant roles in the classification process. These bands contributed the highest to the model's decision-making, suggesting that they contain the most relevant spectral information for distinguishing *Sand* from other classes. The importance of Bands B06 and B03 also indicates their complementary role in improving classification accuracy.
+The SVM model utilized multiple spectral bands to classify *Sand* and other land cover types, as illustrated in @fig-svm-importance. An analysis of feature importance revealed that Bands B07, B12, and B02 played the most significant roles in the classification process. These bands contributed the highest to the model's decision-making, suggesting that they contain the most relevant spectral information for distinguishing *Sand* from other classes. The importance of Bands B06 and B03 also indicates their complementary role in improving classification accuracy.
 
 This result aligns with the expectation that near-infrared and shortwave infrared bands, such as B07 and B12, are particularly effective for detecting *Sand* and vegetation boundaries. However, the results also highlight the limitations of Sentinel-2 data, as these critical bands are only available at a 20 meter resolution, restricting the model's potential for finer scale classifications.
 
-:::{#fig-svm importance}
+:::{#fig-svm-importance}
 ![](Support Vector Machine/importance SVM.png)
 
 Feature importance of spectral bands used in the Support Vector Machine model. Bands B07, B12, and B02 are identified as the most influential in the classification process, highlighting their significance in distinguishing sand and other land cover types
@@ -182,7 +182,7 @@ The evaluation of the Random Forest model reveals that it performs well on data 
 
 The sand area calculations were derived using Sentinel-2 data with a 20m resolution, where each pixel represents a 20m x 20m area. In the visualized results, shown in @fig-all_models_comparison, the model not only detects the sand coastline but also identifies sandy patches within urban and vegetative regions, which is a common feature in Sri Lankan coastal landscapes.
 
-:::{#fig-Sand Area Time}
+:::{#fig-Sand-Area-Time}
 ![](Timeline/Sand Area Time.png)
 
 Fluctuation of Sand Area Over the Years (2019–2023). The line plot illustrates the yearly changes in sand area, highlighting periods of decline and recovery. The trend indicates a gradual reduction in sand area on the beach of Unawatuna over the observed period.
@@ -217,9 +217,9 @@ Sand Pixel Count for the Year 2023
 Spatial distribution of sand pixels detected by the Random Forest model for the years 2019 to 2023. Subfigure (a) shows the sand pixel distribution for 2019, with sand primarily concentrated along the shoreline and some sand pixels detected inland, among forest and building areas. Subfigure (b) for 2020 and subfigure (c) for 2021 display variations in sand coverage, with differences in both shoreline and inland regions. Subfigure (d) for 2022 and subfigure (e) for 2023 illustrate further changes, with sand pixels detected across similar shoreline areas and sporadically inland. Fluctuations in sand coverage are visible across the subfigures, indicating differences in spatial distribution between the years.
 :::
 
-The analysis reveals a clear trend of decreasing sand levels between the years 2020 and 2021, as depicted in @fig-Sand Area Time, indicating a period of reduction in sand coverage along the shoreline. In contrast, the years 2022 and 2023 show a slight recovery, with an increase in sand levels compared to the preceding period. This fluctuation highlights the dynamic nature of sand distribution over time, with periods of both decline and recovery evident in the observed data. The Table \|[2](#fig:tab2){reference-type="ref" reference="fig:tab2"} shows the structed results of the pixel count.
+The analysis reveals a clear trend of decreasing sand levels between the years 2020 and 2021, as depicted in @fig-Sand-Area-Time, indicating a period of reduction in sand coverage along the shoreline. In contrast, the years 2022 and 2023 show a slight recovery, with an increase in sand levels compared to the preceding period. This fluctuation highlights the dynamic nature of sand distribution over time, with periods of both decline and recovery evident in the observed data. @tbl-tab2 shows the structed results of the pixel count.
 
-::: {#fig:tab2}
+::: {#tbl-tab2}
   **Year**   **Sand Area**
   ---------- ---------------
   2019       97600
@@ -228,6 +228,7 @@ The analysis reveals a clear trend of decreasing sand levels between the years 2
   2022       81200
   2023       88400
 
-  : Sandpixel count in total, over the Area of Unawatuna.
+
+: Sandpixel count in total, over the Area of Unawatuna.
 :::
 
