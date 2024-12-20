@@ -1,4 +1,4 @@
-# Abstract {.unnumbered}
+# Abstract {.unnumbered .unlisted}
 
 Coastal environments are dynamic landscapes shaped by natural forces and human activities, necessitating effective monitoring to support sustainable management. This project focuses on developing a methodology to monitor sand fluctuations along the coastline of Unawatuna, Sri Lanka, from 2019 to 2023, using satellite imagery and machine learning. Sentinel-2 data, with its multi-spectral features and 20m spatial resolution, served as the foundation for classifying land cover types such as *Sand, Water, Forest, and Buildings*. The dataset was manually annotated, enhanced by high-resolution references, and used to train machine learning models. While the project highlights the utility of open-source tools like QGIS and R for integrating geospatial analysis with machine learning, challenges such as data resolution limitations and the need for improved classification accuracy remain.
 
@@ -7,3 +7,5 @@ Three models --- Classification and Regression Tree (CART), Random Forest (RF), 
 
 
 
+
+\tableofcontents

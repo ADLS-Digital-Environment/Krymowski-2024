@@ -1,14 +1,18 @@
 project:
   type: book
+  post-render: cp PA2_M.Krymowski.pdf _book/Krymowski2024.pdf
 
 book:
   title: "Monitoring of coastal changes using satellite imagery: A case study of Unawatuna"
+  output-file: "Krymowski2024"
   subtitle: "Project Work 2"
   author: "Meggie Krymowski"
   submitted: "2024-12-12"
   contributor: "Nils Ratnaweera"
+  downloads: pdf
   chapters:
     - index.qmd
+    - intro.qmd
     - theoretical-framework.qmd
     - methodology.qmd
     - results.qmd
@@ -23,8 +27,20 @@ format:
     theme:
       - cosmo
       - brand
-  pdf:
-    documentclass: scrreprt
+  # Todo for pdf:
+    # make figure with smaller
+    # compare with original pdf
+    # to use titlepage, remove the "title"
+  # pdf:
+  #   documentclass: scrreprt
+  #   keep_tex: true
+  #   toc: false
+  #   include-in-header: 
+  #     - text: |
+  #         \usepackage{setspace}
+  #   include-before-body: 
+  #     titlepage.tex
+  #     
 
 
 
